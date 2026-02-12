@@ -23,31 +23,206 @@
    
 
     <section id="pkc" class="section">
-        <h2>Pienkonecenter.fi </h2>
+        <h2>Teollisuuspalvelu.fi </h2>
         <div class="alkupuhe">
-            <p>fill tekstiä tässää</p>
-            <p>Olen rakentanut kotiautomaatiojärjestelmän Home Assistant -alustalle. Tämä projekti on ollut minulle erittäin opettavainen ja mielenkiintoinen, sillä se on yhdistänyt ohjelmointitaitoni ja kiinnostukseni älyteknologiaan.</p>
-
-
+           <h3> TP Verkkokauppa – WooCommerce-kehitys ja integraatiot (WordPress).fi</h3>
+            <p>
+               Toimin TP Verkkokauppa -projektissa teknisenä kehittäjänä ja vastasin verkkokaupan (WordPress + WooCommerce) räätälöinneistä, integraatioista sekä käytännön tuotantoylläpidosta. Projektin ytimessä oli tilaus- ja tuotetiedon hallinnan parantaminen, toimituslogiikan tarkentaminen sekä asiakaspolun selkeyttäminen tuotetiedoissa ja saatavuudessa.
+                Keskeiset toteutukseni
+                Custom WooCommerce -lisäosat (PHP): rakensin ja ylläpidin tuotantotasoisia lisäosia (versiointi, yhteensopivuus, deprekoitujen toimintojen korjaukset), jotta verkkokaupan toiminnallisuudet saatiin erotettua teema-koodista ja pidettyä hallittavina.
+                Toimituslogiikan ja toimitustapojen kehitys: toteutin toimitusvaihtoehtoihin sääntöjä ja luokittelua (esim. eri kuljetusluokat, noutopisteet/myymälänoudot, pientoimitus vs. rahti), jotta kassalla näkyy oikeat toimitustavat tilauksen sisällön perusteella.
+                Tuotesaatavuuden esitystapa ja varastonäkymä: rakensin käyttöliittymäparannuksia ja “saatavuuspallo”-logiikkaa, mukaan lukien bundle-tuotteiden saatavuuden laskenta (näytetään koontisaldo oikein, ei osien “listaa”).
+                Bundle-tuotteiden automaattinen muodostus: toteutin logiikkaa, joka rakentaa/ylläpitää WooSB-bundleja tuoteattribuuteista (komponentit, määrät, hinnat) – vähentää manuaalista ylläpitoa ja virheitä.
+                Suorituskyky ja välimuistit: huomioin käytännön suorituskyvyn (mm. välimuistin vaihtelutekijät variaatio-URL:eille, frontin JS/CSS optimointi ja “laastarit” tilanteisiin, joissa WooCommerce ei päivitä hintoja/saatavuutta odotetusti).
+                ERP- ja toimittajadatan käsittely: suunnittelin tuotetiedon yhtenäistämistä ja automaatiota tilanteessa, jossa ERP tuottaa manuaalisia CSV-exportteja ja toimittajat toimittavat päivityksiä XLSX-muodossa (erilaiset sarakerakenteet ja päällekkäiset kentät huomioiden).
+            </p>
+            <br>
+            <p>
+                Teknologiat ja työskentelytapa:
+                WordPress, WooCommerce, PHP (plugin-arkkitehtuuri), JavaScript/jQuery, HTML/CSS
+                Integraatioajattelu (ERP/CSV/SOAP, toimittajatiedostot), tuotantoympäristön huomiointi ja regressioriskin minimointi
+                Dokumentointi ja ylläpidettävyys: selkeät rajapinnat, asetukset/admin-näkymät, sekä muutoshallinta versionumeroinnin kautta
+                Projektissa olennaista oli yhdistää liiketoiminnan arki (toimitukset, varasto, myymälänoudot, bundle-tuotteet, hinnoittelu) teknisesti kestäviin ratkaisuihin niin, että verkkokaupan ylläpito helpottuu ja asiakkaalle näkyvä ostokokemus pysyy selkeänä.
+            </p>
         </div>
 
         
         <div class="leipäteksti">
-            <p>fill tekstiä tässää</p>
-            <img src="../images/pkc/logo.png" alt="vanha logo" class="maatalous-image">
-            <p>Verkkokauppa, jossa myydään pienkoneita ja tarvikkeita.</p>
+            <div class="code-example">
+                <h3>1) Toimitusaika tuotemerkkikohtaisesti (+ ennakkomyynti)</h3>
+                <p>Mitä tekee: näyttää tuotteen toimitusajan brändin (attribuutti/taksonomia pa_tuotemerkki) mukaan ja tukee ennakkomyyntiä (päivämäärä-attribuutti), jossa toimitus määräytyy päivämäärän perusteella.</p>
+                <figure class="code-snippet">
+                    <div class="code-header">
+                        <span>PHP</span>
+                        <span class="code-meta">WooCommerce</span>
+                    </div>
+                    <pre><code class="language-php">&lt;?php
+                    if (!defined('ABSPATH')) exit;
 
-            <img src="../images/pkc/PKC_logo_white_vaaka_700.png" alt="nykyinen logo" class="pkc-image4">
-            <p>Olen rakentanut kotiautomaatiojärjestelmän Home Assistant -alustalle. Tämä projekti on ollut minulle erittäin opettavainen ja mielenkiintoinen, sillä se on yhdistänyt ohjelmointitaitoni ja kiinnostukseni älyteknologiaan.</p>
-            <p>Kotiautomaatiojärjestelmäni perustuu Home Assistant -alustaan, joka on avoimen lähdekoodin alusta älykotien hallintaan. Olen käyttänyt Pythonia ja YAML:ia konfiguraatioiden luomiseen, sekä hyödyntänyt erilaisia integraatioita ja automaatiosääntöjä luodakseni sujuvan ja tehokkaan älykotijärjestelmän.</p>
-            <p>Projektin aikana olen oppinut paljon Home Assistantin toiminnasta, sekä siitä, miten erilaiset laitteet ja palvelut voidaan integroida yhteen. Olen myös</p>
-            <img src="../images/pkc/pkc_tilastot.jpg" alt="Tilastot" class="pkc-image3">
-            <img src="../images/pkc/pkc_nettomyynti.jpg" alt="Nettomyynnin kasvu kuva" class="pkc-image1">
-            <img src="../images/pkc/pkc_tilaukset.jpg" alt="Tilausten kasvu kuva" class="pkc-image2">
-            <p>Olen rakentanut kotiautomaatiojärjestelmän Home Assistant -alustalle. Tämä projekti on ollut minulle erittäin opettavainen ja mielenkiintoinen, sillä se on yhdistänyt ohjelmointitaitoni ja kiinnostukseni älyteknologiaan.</p>
-            <p>Kotiautomaatiojärjestelmäni perustuu Home Assistant -alustaan, joka on avoimen lähdekoodin alusta älykotien hallintaan. Olen käyttänyt Pythonia ja YAML:ia konfiguraatioiden luomiseen, sekä hyödyntänyt erilaisia integraatioita ja automaatiosääntöjä luodakseni sujuvan ja tehokkaan älykotijärjestelmän.</p>
-            <p>Projektin aikana olen oppinut paljon Home Assistantin toiminnasta, sekä siitä, miten erilaiset laitteet ja palvelut voidaan integroida yhteen. Olen myös</p>
-    </section>
+                    define('RTP_DELIVERY_OPTION_KEY', 'rtp_delivery_times_by_brand');
+                    define('RTP_BRAND_TAXONOMY', 'pa_tuotemerkki');
+
+                    function rtp_wp_timezone(): DateTimeZone {
+                        if (function_exists('wp_timezone')) return wp_timezone();
+                        $tz = get_option('timezone_string') ?: 'UTC';
+                        return new DateTimeZone($tz);
+                    }
+
+                    add_action('woocommerce_single_product_summary', function () {
+                        global $product;
+                        if (!$product instanceof WC_Product) return;
+
+                        $terms = wp_get_post_terms($product->get_id(), RTP_BRAND_TAXONOMY);
+                        $brand = $terms &amp;&amp; !is_wp_error($terms) ? $terms[0]->slug : '';
+
+                        $map = (array) get_option(RTP_DELIVERY_OPTION_KEY, []);
+                        $delivery = $brand &amp;&amp; isset($map[$brand]) ? sanitize_text_field($map[$brand]) : '';
+
+                        if ($delivery !== '') {
+                            echo '&lt;p class=&quot;rtp-delivery-time&quot;&gt;&lt;strong&gt;Toimitusaika:&lt;/strong&gt; ' . esc_html($delivery) . '&lt;/p&gt;';
+                        }
+                    }, 35);
+                    </code></pre>
+                </figure>
+            </div>
+
+            <div class="code-example">
+                <h3>2) TP Variation Price From URL (WooCommerce)</h3>
+                <p>Mitä tekee: kun variaatio on esivalittu URL-parametreilla (esim. <code>?attribute_pa_*</code>), lisäosa varmistaa että hinta näytetään oikein, schema.org Offer muodostuu oikein ja LiteSpeedille lisätään tarvittavat cache vary -parametrit.</p>
+                <figure class="code-snippet">
+                    <div class="code-header">
+                        <span>PHP</span>
+                        <span class="code-meta">WooCommerce + LiteSpeed</span>
+                    </div>
+                    <pre><code class="language-php">&lt;?php
+                    if (!defined('ABSPATH')) exit;
+
+                    final class TP_Google_Price_Fix {
+                        public static function init(): void {
+                            add_action('plugins_loaded', [__CLASS__, 'hooks'], 20);
+                        }
+
+                        public static function hooks(): void {
+                            if (!class_exists('WooCommerce')) return;
+
+                            add_filter('woocommerce_get_price_html', [__CLASS__, 'price_html'], 100, 2);
+                            add_filter('woocommerce_structured_data_product', [__CLASS__, 'schema_offer'], 100, 2);
+
+                            // LiteSpeed: variaatio-URL:t omiksi cache-versioiksi
+                            add_filter('litespeed_cache_vary_get', [__CLASS__, 'vary_params']);
+                        }
+
+                        public static function vary_params($vary) {
+                            $vary[] = 'attribute_pa_koko';
+                            $vary[] = 'attribute_pa_vari';
+                            return $vary;
+                        }
+                    }
+                    TP_Google_Price_Fix::init();
+                    </code></pre>
+                </figure>
+            </div>
+
+            <div class="code-example">
+                <h3>3) TP ERP → WooSB Bundle Builder (from Product Attributes)</h3>
+                <p>Mitä tekee: rakentaa ja päivittää WPClever WooSB bundle -tuotteet automaattisesti tuoteattribuuteista (bundle-nimi, komponentin yksikköhinta, komponentin määrä).</p>
+                <figure class="code-snippet">
+                    <div class="code-header">
+                        <span>PHP</span>
+                        <span class="code-meta">WooSB</span>
+                    </div>
+                    <pre><code class="language-php">&lt;?php
+                    if (!defined('ABSPATH')) exit;
+
+                    final class TP_ERP_WooSB_Bundle_From_Attributes {
+                        private const ATTR_BUNDLE_NAME = 'pa_bundle_nimi';
+                        private const ATTR_UNIT_PRICE  = 'pa_bundle_hinta';
+                        private const ATTR_QTY         = 'pa_bundle_maara';
+                        private const WOOSB_IDS_META_KEY = 'woosb_ids';
+
+                        /** Päivittää WooSB:n &quot;woosb_ids&quot; -metan muodossa: product_id/qty/price */
+                        private static function update_bundle_meta(int $bundle_id, array $rows): void {
+                            $parts = [];
+                            foreach ($rows as $r) {
+                                $pid   = (int) ($r['product_id'] ?? 0);
+                                $qty   = (float) ($r['qty'] ?? 1);
+                                $price = (float) ($r['unit_price'] ?? 0);
+                                if ($pid &lt;= 0) continue;
+                                $parts[] = &quot;{$pid}/{$qty}/{$price}&quot;;
+                            }
+                            update_post_meta($bundle_id, self::WOOSB_IDS_META_KEY, implode(',', $parts));
+                        }
+                    }
+                    </code></pre>
+                </figure>
+            </div>
+
+            <div class="code-example">
+                <h3>4) Riihimäen Teollisuuspalvelu – YITH Ajax Navigation -filtterit listauksen yläpuolelle</h3>
+                <p>Mitä tekee: lisää YITH WooCommerce Ajax Navigation -filtterit tuotteiden listauksen yläpuolelle (category/shop), jotta suodatus on selkeästi asiakkaan näkyvissä.</p>
+                <figure class="code-snippet">
+                    <div class="code-header">
+                        <span>PHP</span>
+                        <span class="code-meta">YITH Filters</span>
+                    </div>
+                    <pre><code class="language-php">&lt;?php
+                    if (!defined('ABSPATH')) exit;
+
+                    final class RTP_Filters {
+                        public function __construct() {
+                            add_action('woocommerce_before_shop_loop', [$this, 'render_filters'], 5);
+                        }
+
+                        public function render_filters(): void {
+                            if (!function_exists('do_shortcode')) return;
+
+                            // Esim. YITH shortcode (vaihda tähän teidän käytössä oleva)
+                            echo '&lt;div class=&quot;rtp-filters&quot;&gt;';
+                            echo do_shortcode('[yith_wcan_filters slug=&quot;tuotefiltterit&quot;]');
+                            echo '&lt;/div&gt;';
+                        }
+                    }
+                    new RTP_Filters();
+                    </code></pre>
+                </figure>
+            </div>
+
+            <div class="code-example">
+                <h3>5) Saatavuus-/varastopallot tuotesivulle (assetit + frontend-logiikka)</h3>
+                <p>Mitä tekee: lisää tuotesivulle varaston/saatavuuden UI:n (pallot, toimipaikkakohtainen saldo, bundle-logiikan huomiointi) ja lataa JS/CSS tuotantotyyliin filemtime‑versioinnilla.</p>
+                <figure class="code-snippet">
+                    <div class="code-header">
+                        <span>PHP</span>
+                        <span class="code-meta">Assets + UI</span>
+                    </div>
+                    <pre><code class="language-php">&lt;?php
+                    add_action('wp_enqueue_scripts', function () {
+                        if (!is_product()) return;
+
+                        $css_path = get_stylesheet_directory() . '/assets/css/stock-widget.css';
+                        $js_path  = get_stylesheet_directory() . '/assets/js/stock-widget.js';
+
+                        wp_enqueue_style(
+                            'stock-widget',
+                            get_stylesheet_directory_uri() . '/assets/css/stock-widget.css',
+                            [],
+                            file_exists($css_path) ? filemtime($css_path) : null
+                        );
+
+                        wp_enqueue_script(
+                            'stock-widget',
+                            get_stylesheet_directory_uri() . '/assets/js/stock-widget.js',
+                            ['jquery'],
+                            file_exists($js_path) ? filemtime($js_path) : null,
+                            true
+                        );
+                    }, 20);
+
+                    </code></pre>
+                </figure>
+            </div>
+        </div>
+        </section>
 
    
 
@@ -56,6 +231,6 @@
         <p>&copy; <span id="year"></span> Esa Partanen. Kaikki oikeudet pidätetään.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
