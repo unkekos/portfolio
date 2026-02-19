@@ -23,6 +23,26 @@
     <section id="home-assistant" class="section">
         <h2>Kotiautomatio nn-mpc </h2>
         <div class="alkupuhe">
+
+
+            <p>Eval device: cuda
+            rows total=5438 train=4350 test=1088
+            feature_order (data): ['indoor_temp', 'outdoor_temp', 'current_offset', 'delta_t', 'outdoor_trend_h', 'hour_sin', 'hour_cos', 'weekday_sin', 'weekday_cos', 'yday_sin', 'yday_cos', 'outdoor_temp_avg_6h', 'outdoor_temp_avg_24h', 'clear_sky', 'outdoor_temp_min_12h', 'outdoor_temp_avg_12h', 'outdoor_temp_max_12h', 'outdoor_temp_min_24h', 'outdoor_temp_avg_24h', 'outdoor_temp_max_24h']
+            rc params: RCParams(a=0.0, b=0.004497339017689228, c=0.00810862798243761)
+
+            === 1-STEP (15min) TEST METRICS ===
+            MODEL   MAE=0.0758  RMSE=0.0986
+            HOLD    MAE=0.0998  RMSE=0.1352
+            RC-only MAE=0.0997  RMSE=0.1336
+
+            === ROLLOUT TEST METRICS (iterative) ===
+            H=  4 steps  MAE=0.0878  RMSE=0.1161  (valid=992)
+            H= 24 steps  MAE=0.0836  RMSE=0.1072  (valid=992)
+            H= 96 steps  MAE=0.0901  RMSE=0.1181  (valid=992)
+            </p>
+
+
+
             <p>fill tekstiä tässää</p>
 
             <p>Olen rakentanut kotiautomaatiojärjestelmän Home Assistant -alustalle. Tämä projekti on ollut minulle erittäin opettavainen ja mielenkiintoinen, sillä se on yhdistänyt ohjelmointitaitoni ja kiinnostukseni älyteknologiaan.</p>

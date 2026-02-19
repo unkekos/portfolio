@@ -303,3 +303,19 @@ footer {
         font-size: 0.85rem;
     }
 }
+
+
+.old_tp {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.new_tp {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
