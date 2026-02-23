@@ -6,7 +6,7 @@
     <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
     <title>Esa Partanen | Portfolio</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="htTeollisuuspalvelus://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -23,52 +23,85 @@
    
 
     <section id="pkc" class="section">
-        <h2>Teollisuuspalvelu.fi </h2>
-        <div class="alkupuhe">
-           <h3> TP Verkkokauppa – WooCommerce-kehitys ja integraatiot (WordPress).fi</h3>
+        <h2>Teollisuuspalvelu.fi</h2>
+        <div class="migraatio">
+            <h3>Projektin kulku aikajärjestyksessä</h3>
             <p>
-               Toimin TP Verkkokauppa -projektissa teknisenä kehittäjänä ja vastasin verkkokaupan (WordPress + WooCommerce) räätälöinneistä, integraatioista sekä käytännön tuotantoylläpidosta. Projektin ytimessä oli tilaus- ja tuotetiedon hallinnan parantaminen, toimituslogiikan tarkentaminen sekä asiakaspolun selkeyttäminen tuotetiedoissa ja saatavuudessa.
-                Keskeiset toteutukseni
-                Custom WooCommerce -lisäosat (PHP): rakensin ja ylläpidin tuotantotasoisia lisäosia (versiointi, yhteensopivuus, deprekoitujen toimintojen korjaukset), jotta verkkokaupan toiminnallisuudet saatiin erotettua teema-koodista ja pidettyä hallittavina.
-                Toimituslogiikan ja toimitustapojen kehitys: toteutin toimitusvaihtoehtoihin sääntöjä ja luokittelua (esim. eri kuljetusluokat, noutopisteet/myymälänoudot, pientoimitus vs. rahti), jotta kassalla näkyy oikeat toimitustavat tilauksen sisällön perusteella.
-                Tuotesaatavuuden esitystapa ja varastonäkymä: rakensin käyttöliittymäparannuksia ja “saatavuuspallo”-logiikkaa, mukaan lukien bundle-tuotteiden saatavuuden laskenta (näytetään koontisaldo oikein, ei osien “listaa”).
-                Bundle-tuotteiden automaattinen muodostus: toteutin logiikkaa, joka rakentaa/ylläpitää WooSB-bundleja tuoteattribuuteista (komponentit, määrät, hinnat) – vähentää manuaalista ylläpitoa ja virheitä.
-                Suorituskyky ja välimuistit: huomioin käytännön suorituskyvyn (mm. välimuistin vaihtelutekijät variaatio-URL:eille, frontin JS/CSS optimointi ja “laastarit” tilanteisiin, joissa WooCommerce ei päivitä hintoja/saatavuutta odotetusti).
-                ERP- ja toimittajadatan käsittely: suunnittelin tuotetiedon yhtenäistämistä ja automaatiota tilanteessa, jossa ERP tuottaa manuaalisia CSV-exportteja ja toimittajat toimittavat päivityksiä XLSX-muodossa (erilaiset sarakerakenteet ja päällekkäiset kentät huomioiden).
+                Aloittaessani TP-projektissa käynnistimme heti verkkokaupan migraation MyCashflow-alustalta
+                WordPress/WooCommerce-ympäristöön. Tavoitteena oli yhtenäistää toimintaa toisen verkkokaupan kanssa,
+                varmistaa ERP-integraation toimivuus sekä turvata liiketoiminnan jatkuvuus ilman yllättäviä katkoksia.
+            </p>
+            <br>
+            <p>
+                Migraation aikana toimin teknisenä vastuuhenkilönä sekä yritysjohdon ja teknisten toteuttajien välisenä
+                linkkinä. Raportoin säännöllisesti mitä on tehty, mitkä ovat keskeiset uhkat ja mitä seuraavaksi tehdään,
+                ja varmistin, että kaikki sidosryhmät tiesivät mitä tehdään ja milloin tehdään.
+            </p>
+            <br>
+            <p>
+                Migraation valmistuttua siirryin jatkokehitykseen: toteutin useita custom WooCommerce -lisäosia, tein
+                ulkoasun räätälöintejä sekä paransin verkkokaupan suorituskykyä ja käytettävyyttä.
+            </p>
+            <br>
+            <p>Alla vertailu: ensimmäinen kuva on MyCashflow-etusivusta, jälkimmäinen kuva uudesta etusivusta.</p>
+            <img src="../images/tp/Old_tp.jpeg" alt="Vanha MyCashflow-verkkokaupan etusivu" class="old_tp">
+            <p>
+                Ensimmäinen kuva näyttää lähtötilanteen MyCashflow-alustalla ennen migraatiota. Uudistuksen tavoitteena oli
+                selkeyttää etusivun rakennetta, parantaa tuotteiden löydettävyyttä ja tehdä ostopolusta käyttäjälle
+                suoraviivaisempi.
+            </p>
+            <img src="../images/tp/tp_new.jpg" alt="Uusi WordPress/WooCommerce-verkkokaupan etusivu" class="new_tp">
+            <br>
+            <br>
+            <h3>Laajempi vastuualue TP-verkkokauppassa</h3>
+            <p>
+                Olen tehnyt TP- ja PKC-verkkokauppoihin liittyen laajasti käytännön verkkokauppakehitystä, ylläpitoa ja
+                liiketoimintaa tukevia teknisiä ratkaisuja WordPress- ja WooCommerce-ympäristössä. Roolini on ollut
+                yhdistää asiakasnäkymän toimivuus, taustalogiikka, tuotetieto, toimitusmallit ja ylläpidettävyys
+                tuotannossa luotettavasti toimivaksi kokonaisuudeksi.
+            </p>
+            <br>
+            <p>
+                Olen rakentanut ja ylläpitänyt useita räätälöityjä WooCommerce-lisäosia sekä tuotantokriittisiä
+                korjauksia. Työhön on kuulunut muun muassa toimitusaikojen näyttäminen tuotemerkkikohtaisesti,
+                ennakkomyyntilogiikan toteutus, hallintapuolen työkalut toimitusaikojen keskitettyyn ylläpitoon sekä
+                käytännön ongelmien ratkaisu ilman manuaalista koodimuokkausta arjen ylläpidossa.
+            </p>
+            <br>
+            <p>
+                Hinnoittelun osalta olen korjannut sekä näkyvän hintatiedon että rakenteisen datan (schema.org Offer)
+                toimivuutta. Olen toteuttanut variaatiohinnoittelun URL-parametrien perusteella niin, että oikea hinta
+                näkyy asiakkaalle oikein myös välimuistin kanssa (esim. LiteSpeed cache vary), ja estänyt tilanteita, joissa
+                lisäosien yhteisvaikutukset rikkovat hinnan päivityksen tai ostoskorin toiminnan.
+            </p>
+            <br>
+            <p>
+                Saatavuus- ja varastoviestinnässä olen kehittänyt toimipistekohtaista UI-logiikkaa sekä korjannut
+                variaatio- ja bundle-tuotteiden näkyvyysongelmia. Bundle-tuotteissa olen vienyt toteutusta suuntaan, jossa
+                asiakkaalle näytetään yksi oikea kokonaissaatavuus komponenttikohtaisten irrallisten rivien sijaan.
+                Lisäksi olen rakentanut automaatiota, jolla WooSB-bundleja muodostetaan ja päivitetään ERP-attribuuttien
+                perusteella.
+            </p>
+            <br>
+            <p>
+                Toimituslogiikan ja taustaprosessien osalta olen toteuttanut sääntöpohjaista toimitustapojen näkyvyyttä,
+                toimitusluokkien määrityksiä mittojen ja painon perusteella sekä ratkaisuja, joilla ERP:n CSV-viennit ja
+                toimittajien XLSX-päivitykset saadaan käsiteltyä hallitusti. Olen myös toteuttanut Omnibus-hintaseurantaan
+                liittyviä toimintoja (30 päivän alin hinta) huomioiden tietoturvan, suorituskyvyn ja ylläpidettävyyden.
             </p>
             <br>
             <p>
                 Teknologiat ja työskentelytapa:
-                WordPress, WooCommerce, PHP (plugin-arkkitehtuuri), JavaScript/jQuery, HTML/CSS
-                Integraatioajattelu (ERP/CSV/SOAP, toimittajatiedostot), tuotantoympäristön huomiointi ja regressioriskin minimointi
-                Dokumentointi ja ylläpidettävyys: selkeät rajapinnat, asetukset/admin-näkymät, sekä muutoshallinta versionumeroinnin kautta
-                Projektissa olennaista oli yhdistää liiketoiminnan arki (toimitukset, varasto, myymälänoudot, bundle-tuotteet, hinnoittelu) teknisesti kestäviin ratkaisuihin niin, että verkkokaupan ylläpito helpottuu ja asiakkaalle näkyvä ostokokemus pysyy selkeänä.
+                WordPress, WooCommerce, PHP (plugin-arkkitehtuuri), JavaScript/jQuery, HTML/CSS sekä integraatiot
+                ERP/CSV/SOAP-rajapinnoissa. Toteutan muutokset tuotantolähtöisesti, vaiheittain ja testattavasti siten, että
+                regressioriski pysyy hallinnassa ja verkkokaupan asiakaspolku säilyy vakaana.
             </p>
         </div>
-
-    <section id="pkc" class="section">
-        <div class="alkupuhe">
-           <h3> Teollsiuuspalvelu.fi alustamigraatioksi</h3>
-            <p>
-            <img src="../images/tp/Old_tp.jpeg" alt="Vanhan Teollisuuspalvelu verkkokauppa" class="old_tp">
-            </p>
-            <br>
-
-            <p>
-            Teollisuuspalvelu uusi ilme</p>
-            <img src="../images/tp/tp_new.jpg" alt="Uusi Teollisuuspalvelu verkkokauppa" class="new_tp">
-
-
-
-
-            </p>
-        </div>
-    </section>
 
 
 
         
-        <div class="leipäteksti">
+        <div class="code-example">
             <div class="code-example">
                 <h3>1) Toimitusaika tuotemerkkikohtaisesti (+ ennakkomyynti)</h3>
                 <p>Mitä tekee: näyttää tuotteen toimitusajan brändin (attribuutti/taksonomia pa_tuotemerkki) mukaan ja tukee ennakkomyyntiä (päivämäärä-attribuutti), jossa toimitus määräytyy päivämäärän perusteella.</p>
@@ -80,10 +113,10 @@
                     <pre><code class="language-php">&lt;?php
                     if (!defined('ABSPATH')) exit;
 
-                    define('RTP_DELIVERY_OPTION_KEY', 'rtp_delivery_times_by_brand');
-                    define('RTP_BRAND_TAXONOMY', 'pa_tuotemerkki');
+                    define('RTeollisuuspalvelu_DELIVERY_OPTION_KEY', 'rTeollisuuspalvelu_delivery_times_by_brand');
+                    define('RTeollisuuspalvelu_BRAND_TAXONOMY', 'pa_tuotemerkki');
 
-                    function rtp_wp_timezone(): DateTimeZone {
+                    function rTeollisuuspalvelu_wp_timezone(): DateTimeZone {
                         if (function_exists('wp_timezone')) return wp_timezone();
                         $tz = get_option('timezone_string') ?: 'UTC';
                         return new DateTimeZone($tz);
@@ -93,14 +126,14 @@
                         global $product;
                         if (!$product instanceof WC_Product) return;
 
-                        $terms = wp_get_post_terms($product->get_id(), RTP_BRAND_TAXONOMY);
+                        $terms = wp_get_post_terms($product->get_id(), RTeollisuuspalvelu_BRAND_TAXONOMY);
                         $brand = $terms &amp;&amp; !is_wp_error($terms) ? $terms[0]->slug : '';
 
-                        $map = (array) get_option(RTP_DELIVERY_OPTION_KEY, []);
+                        $map = (array) get_option(RTeollisuuspalvelu_DELIVERY_OPTION_KEY, []);
                         $delivery = $brand &amp;&amp; isset($map[$brand]) ? sanitize_text_field($map[$brand]) : '';
 
                         if ($delivery !== '') {
-                            echo '&lt;p class=&quot;rtp-delivery-time&quot;&gt;&lt;strong&gt;Toimitusaika:&lt;/strong&gt; ' . esc_html($delivery) . '&lt;/p&gt;';
+                            echo '&lt;p class=&quot;rTeollisuuspalvelu-delivery-time&quot;&gt;&lt;strong&gt;Toimitusaika:&lt;/strong&gt; ' . esc_html($delivery) . '&lt;/p&gt;';
                         }
                     }, 35);
                     </code></pre>
@@ -108,7 +141,7 @@
             </div>
 
             <div class="code-example">
-                <h3>2) TP Variation Price From URL (WooCommerce)</h3>
+                <h3>2) Teollisuuspalvelu Variation Price From URL (WooCommerce)</h3>
                 <p>Mitä tekee: kun variaatio on esivalittu URL-parametreilla (esim. <code>?attribute_pa_*</code>), lisäosa varmistaa että hinta näytetään oikein, schema.org Offer muodostuu oikein ja LiteSpeedille lisätään tarvittavat cache vary -parametrit.</p>
                 <figure class="code-snippet">
                     <div class="code-header">
@@ -118,7 +151,7 @@
                     <pre><code class="language-php">&lt;?php
                     if (!defined('ABSPATH')) exit;
 
-                    final class TP_Google_Price_Fix {
+                    final class Teollisuuspalvelu_Google_Price_Fix {
                         public static function init(): void {
                             add_action('plugins_loaded', [__CLASS__, 'hooks'], 20);
                         }
@@ -139,13 +172,13 @@
                             return $vary;
                         }
                     }
-                    TP_Google_Price_Fix::init();
+                    Teollisuuspalvelu_Google_Price_Fix::init();
                     </code></pre>
                 </figure>
             </div>
 
             <div class="code-example">
-                <h3>3) TP ERP → WooSB Bundle Builder (from Product Attributes)</h3>
+                <h3>3) Teollisuuspalvelu ERP → WooSB Bundle Builder (from Product Attributes)</h3>
                 <p>Mitä tekee: rakentaa ja päivittää WPClever WooSB bundle -tuotteet automaattisesti tuoteattribuuteista (bundle-nimi, komponentin yksikköhinta, komponentin määrä).</p>
                 <figure class="code-snippet">
                     <div class="code-header">
@@ -155,7 +188,7 @@
                     <pre><code class="language-php">&lt;?php
                     if (!defined('ABSPATH')) exit;
 
-                    final class TP_ERP_WooSB_Bundle_From_Attributes {
+                    final class Teollisuuspalvelu_ERP_WooSB_Bundle_From_Attributes {
                         private const ATTR_BUNDLE_NAME = 'pa_bundle_nimi';
                         private const ATTR_UNIT_PRICE  = 'pa_bundle_hinta';
                         private const ATTR_QTY         = 'pa_bundle_maara';
@@ -179,7 +212,7 @@
             </div>
 
             <div class="code-example">
-                <h3>4) Riihimäen Teollisuuspalvelu – YITH Ajax Navigation -filtterit listauksen yläpuolelle</h3>
+                <h3>4) Riihimäen Teollisuuspalvelu - YITH Ajax Navigation -filtterit listauksen yläpuolelle</h3>
                 <p>Mitä tekee: lisää YITH WooCommerce Ajax Navigation -filtterit tuotteiden listauksen yläpuolelle (category/shop), jotta suodatus on selkeästi asiakkaan näkyvissä.</p>
                 <figure class="code-snippet">
                     <div class="code-header">
@@ -189,7 +222,7 @@
                     <pre><code class="language-php">&lt;?php
                     if (!defined('ABSPATH')) exit;
 
-                    final class RTP_Filters {
+                    final class RTeollisuuspalvelu_Filters {
                         public function __construct() {
                             add_action('woocommerce_before_shop_loop', [$this, 'render_filters'], 5);
                         }
@@ -198,12 +231,12 @@
                             if (!function_exists('do_shortcode')) return;
 
                             // Esim. YITH shortcode (vaihda tähän teidän käytössä oleva)
-                            echo '&lt;div class=&quot;rtp-filters&quot;&gt;';
+                            echo '&lt;div class=&quot;rTeollisuuspalvelu-filters&quot;&gt;';
                             echo do_shortcode('[yith_wcan_filters slug=&quot;tuotefiltterit&quot;]');
                             echo '&lt;/div&gt;';
                         }
                     }
-                    new RTP_Filters();
+                    new RTeollisuuspalvelu_Filters();
                     </code></pre>
                 </figure>
             </div>
@@ -252,6 +285,6 @@
         <p>&copy; <span id="year"></span> Esa Partanen. Kaikki oikeudet pidätetään.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
