@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
     <title>Esa Partanen | Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=20260510-plugin-versions">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -20,35 +20,263 @@
         </ul>
     </nav>
 
-   
-
     <section id="pkc" class="section">
-        <h2>Lisäosat Pienkonecenter ja Teollisuuspalvelu.fi </h2>
+        <h2>WordPress- ja WooCommerce-lisäosat</h2>
         <div class="alkupuhe">
             <p>
-                Pienkonecenter.fi on laaja pienkoneiden ja varaosien verkkokauppa. Projektin tavoitteena oli uudistaa verkkokaupan ilme, parantaa käytettävyyttä ja tehostaa myyntiä.
-                Vastasin sivuston teknisestä toteutuksesta, integraatioista ja hakukoneoptimoinnin teknisistä ratkaisuista.
+                Alla on kooste Pienkonecenter.fi- ja Teollisuuspalvelu.fi-ympäristöihin tehdyistä omista lisäosista.
+                Kuvaukset ja patch notesit.
             </p>
         </div>
 
-        
-        <div class="leipäteksti">
-            <h3>Brändiuudistus ja modernisointi</h3>
-            <p>Sivusto koki täydellisen muodonmuutoksen, jossa vanha ilme päivitettiin nykyaikaiseksi ja mobiiliystävälliseksi.</p>
-            
-            <div class="image-comparison">
-                <img src="../images/pkc/logo.png" alt="Vanha logo" class="maatalous-image" style="max-width: 200px;">
-                <img src="../images/pkc/PKC_logo_white_vaaka_700.png" alt="Nykyinen logo" class="pkc-image4" style="background: #ffffff; padding: 10px;">
-            </div>
+        <div class="plugin-notes">
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">WooCommerce / varaosat</p>
+                    <h3>TP xEPC Add to Cart</h3>
+                    <p class="plugin-note__version">Käytössä: v1.0.11</p>
+                </div>
+                <p>
+                    Integroi Husqvarnan xEPC-varaosahaun WooCommerceen. Lisäosa ottaa iframe-palvelusta tulevan varaosanumeron, etsii sitä vastaavan tuotteen SKU:sta tai määritellyistä metakentistä ja lisää tuotteen ostoskoriin.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty shortcode <code>[tp_xepc_iframe]</code>, jolla iframe voidaan sijoittaa suoraan sivun sisältöön.</li>
+                    <li>Estetty tupla-iframe, jos shortcode on jo sivulla ja sivu on merkitty xEPC-sivuksi.</li>
+                    <li>Lisätty asiakkaalle näkyvät virhekoodit, kuten <code>100</code> tuotetta ei löytynyt ja <code>108</code> turvatarkistus epäonnistui.</li>
+                    <li>Lisätty samaan origin-osoitteeseen nojaava AJAX-varmistus välimuistiympäristöihin, joissa CSRF-token voi vanhentua.</li>
+                    <li>Parannettu virhelokia request id -tunnisteella, jotta asiakaspalvelutilanteissa virhe on helpompi jäljittää.</li>
+                </ul>
+            </article>
 
-            <h3>Tulokset ja analytiikka</h3>
-            <p>
-                Uudistuksen ja jatkuvan kehitystyön myötä verkkokaupan myynti ja tilausmäärät ovat kasvaneet merkittävästi. 
-                Toteutin sivustolle seurannan, jonka avulla voimme reagoida nopeasti asiakaskäyttäytymisen muutoksiin.
-            </p>
-            <img src="../images/pkc/pkc_tilastot.jpg" alt="Tilastot" class="pkc-image3">
-            <img src="../images/pkc/pkc_nettomyynti.jpg" alt="Nettomyynnin kasvu kuva" class="pkc-image1">
-            <img src="../images/pkc/pkc_tilaukset.jpg" alt="Tilausten kasvu kuva" class="pkc-image2">
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Google Merchant Center</p>
+                    <h3>TP Google Product Feed</h3>
+                    <p class="plugin-note__version">Käytössä: v1.4.3</p>
+                </div>
+                <p>
+                    Rakentaa WooCommerce-tuotteista Google Merchant Centerille XML-tuotefeedin taustatyönä. 
+                    Feed tallennetaan tiedostoksi, jotta Google voi hakea sen ilman että koko tuoteluettelo generoidaan jokaisella pyynnöllä. 
+                    Lisäosa on tehty sen tähden kun kaupalliset lisäosion kanssa tullut ongelmaksi suuret tuotemäärät, 
+                    jotka aiheuttavat luotettavuus ongelmia sen kanssa että feedi syöttää oikeaa dataa googleen.
+                    Lisäosa eritys piire että jos Tp rank math laittaa <code>noindex</code> tuotteelle, niin se ei päädy feediin, vaikka se olisi muuten julkaistu. 
+                    Näin feedissä on vain hakukoneoptimoidut tuotteet, mikä parantaa feedin laatua ja Google Merchant Centerin hyväksyntää.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty taustagenerointi erissä suuria tuotemääriä varten.</li>
+                    <li>Lisätty tuote-, variaatio- ja kategoriakohtaiset poissulut.</li>
+                    <li>Lisätty noindex-tuotteiden poissulku yleisille SEO-lisäosien metakentille.</li>
+                    <li>Lisätty laajempi tuki Merchant Center -kentille, kuten GTIN, MPN, brändi, väri, koko, materiaali, preorder ja custom label -kentät.</li>
+                    <li>Korvattu REST-pohjainen XML-jakelu <code>admin-post.php</code>-pohjaisilla endpointeilla, jotta XML ei rikkoonnu palvelimilla, jotka lisäävät tulostetta ennen XML-deklaraatiota.</li>
+                    <li>Lisätty preview-feed ja viimeisimmän onnistuneen feedin varmistus, jotta vanha toimiva feed pysyy käytössä uuden ajon epäonnistuessa.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">SEO / Rank Math</p>
+                    <h3>TP Rank Math Product Noindex</h3>
+                    <p class="plugin-note__version">Käytössä: v1.1.0</p>
+                </div>
+                <p>
+                    Asettaa Rank Mathin robots-arvoksi <code>noindex</code> yksinkertaisille WooCommerce-tuotteille, 
+                    joilla ei ole kuvaa eikä kuvausta. Tarkoitus on estää heikkojen tuotepohjien päätyminen hakukoneisiin.
+                    Tämä on tullut tarpeen kun lisäsimme suuren määrän tuotteita, joista kaikista ei ollut saatavilla täydellisiä tietoja, 
+                    mutta halusimme silti pitää ne verkkokaupassa saatavilla kuten varaosia.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Muutettu sääntö tuotekategoriasta riippumattomaksi: tarkistus perustuu tuotetyyppiin, kuvaan ja kuvaukseen.</li>
+                    <li>Lisätty helper-funktio <code>tp_is_excluded_from_google()</code>, jota muut lisäosat voivat käyttää samaan poissulkulogiikkaan.</li>
+                    <li>Lisätty WooCommerce HPOS -yhteensopivuusilmoitus.</li>
+                    <li>Lisätty uninstall-tiedosto, joka ei poista dataa, koska lisäosa ei tallenna pysyviä asetuksia.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Lemonsoft / varastosaldot</p>
+                    <h3>Lemonsoft Stock Table on Product Page</h3>
+                    <p class="plugin-note__version">Käytössä: v1.2.5</p>
+                </div>
+                <p>
+                    Välittää Lemonsoftin toimipistekohtaiset varastosaldot tuotesivulle ja muuntaa ne käyttöön esimerkiksi TP Store Availability -näyttöä varten. Lisäosa huomioi myös variaatiotuotteet.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty piilotettu JSON-lähde, josta varastosijaintien tiedot voidaan lukea frontendissä.</li>
+                    <li>Lisätty variaatiokohtainen varastosaldon vaihto, kun asiakas valitsee tuotteen variaation.</li>
+                    <li>Lisätty MutationObserver-pohjainen paikkaus, jotta varastopallot päivittyvät myös silloin kun teema tai muu lisäosa renderöi varastonäkymän uudelleen.</li>
+                    <li>Lisätty välimuistin invalidointi, kun Lemonsoft-varastometat, sijaintitermit tai termimääritykset muuttuvat.</li>
+                    <li>Lisätty yhteensopivuus TP Store Availability -lisäosan kanssa niin, että tavallisten variaatiotuotteiden Lemonsoft-data ei jää bundle-datan alle.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Varastonäyttö / bundle-tuotteet</p>
+                    <h3>TP Store Availability Dots</h3>
+                    <p class="plugin-note__version">Käytössä: v2.1.6</p>
+                </div>
+                <p>
+                    Näyttää tuotesivulla toimipistekohtaisen saatavuuden pisteinä. Lisäosa tukee myös WooSB-bundle-tuotteita, joiden saatavuus lasketaan komponenttien varastosaldoista.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty bundle-komponentti-indeksi ja saatavuusvälimuisti omiin tietokantatauluihin.</li>
+                    <li>Lisätty taustajono bundle-saatavuuden uudelleenrakentamiselle.</li>
+                    <li>Lisätty komponenttikohtainen rebuild-jono, jotta yhden komponentin varastomuutos voidaan kohdistaa sitä käyttäviin bundleihin.</li>
+                    <li>Lisätty request-tason deduplikointi ja shutdown-vaiheen bufferointi, mikä vähentää turhia päällekkäisiä rebuild-pyyntöjä tuontien ja massapäivitysten aikana.</li>
+                    <li>Lisätty frontendin stale-cache-requeue -rajoitus, jotta sivukatselut eivät täytä jonoa liian tiheillä päivityspyynnöillä.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">WooSB / ERP-attribuutit</p>
+                    <h3>TP ERP WooSB Bundle Builder</h3>
+                    <p class="plugin-note__version">Käytössä: v1.1.9</p>
+                </div>
+                <p>
+                    Rakentaa WPClever WooSB -bundle-tuotteita tuoteattribuuttien perusteella. Attribuutista luetaan bundle-nimi, komponentin yksikköhinta ja määrä, jonka pohjalta bundle päivitetään automaattisesti.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty hallittu bundle -merkintä, jotta lisäosa ei ylikirjoita samaa SKU:ta käyttävää tavallista tuotetta.</li>
+                    <li>Lisätty rebuild-lukitus päällekkäisten ajojen estämiseksi.</li>
+                    <li>Jos bundlelta katoavat kaikki komponentit, hallittu bundle tyhjennetään ja siirretään luonnokseksi.</li>
+                    <li>Metakenttiä päivitetään vain, jos arvo on oikeasti muuttunut.</li>
+                    <li>Lisätty WooCommerce-loggeriin kirjoitus ja parannettu hallintanäkymän oikeustarkistuksia.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Lemonsoft B2B</p>
+                    <h3>TP Lemonsoft B2B Default All</h3>
+                    <p class="plugin-note__version">Käytössä: v1.1.0</p>
+                </div>
+                <p>
+                    Pitää Lemonsoft B2B -ryhmänäkyvyydet oletuksena päällä WooCommerce-tuotekategorioissa. Tavoite on, ettei uusi tuoteryhmä jää vahingossa piiloon B2B-ryhmiltä.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Uusille kategorioille asetetaan kaikki julkaistut Lemonsoft B2B -ryhmät, jos käyttäjä ei valitse ryhmiä erikseen.</li>
+                    <li>Lisätty Products-valikon alle hallintasivu massapäivitykselle.</li>
+                    <li>Massapäivitys kirjoittaa ryhmät palvelinpuolella suoraan term meta -tietoihin selainautomaation sijaan.</li>
+                    <li>Lisätty valitse kaikki / tyhjennä kaikki -napit kategoriatyökaluihin.</li>
+                    <li>Lisätty uninstall-polku, joka voi poistaa lisäosan kirjoittamat term metat erillisellä opt-in-asetuksella.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Ylläpito / hallinta</p>
+                    <h3>TP Plugin Suite Manager</h3>
+                    <p class="plugin-note__version">Käytössä: v0.1.1</p>
+                </div>
+                <p>
+                    Kokoaa omat WordPress-lisäosat yhteen hallintanäkymään. Näkymä näyttää lisäosan version, tilan, asetussivun, GitHub-repon ja manuaalisen päivitystarkistuksen.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty oma admin-valikko "Custom lisäosat".</li>
+                    <li>Lisätty yleiskatsaus, jossa näkyvät hallitut lisäosat, versiot ja aktiivisuustila.</li>
+                    <li>Lisätty lisäosakohtaiset sivut, joissa voi avata asetukset, GitHub-repon ja tehdä manuaalisen version tarkistuksen.</li>
+                    <li>Lisätty mahdollisuus täydentää käsin lisäosan asetussivu ja GitHub-repo, jos niitä ei tunnisteta automaattisesti.</li>
+                    <li>Lisätty aktivointi- ja deaktivointitoiminnot hallittaville lisäosille.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Toimitusajat / ennakkomyynti</p>
+                    <h3>Toimitusaika tuotemerkkikohtaisesti ja ennakkomyynti</h3>
+                    <p class="plugin-note__version">Käytössä: v1.0.12</p>
+                </div>
+                <p>
+                    Näyttää tuotemerkkikohtaisia toimitusaikoja ja hakee ennakkomyyntiin liittyviä arvoja tuotteilta ja variaatioilta. Hallintanäkymä auttaa ylläpitämään toimitusaikasääntöjä.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Parannettu ennakkomyyntituotteiden hakua suorilla SQL-kyselyillä, sivutuksella ja välimuistilla.</li>
+                    <li>Lisätty stale-cache-tuki, jotta hallintanäkymä voi näyttää vanhan tuloksen samalla kun uutta rakennetaan.</li>
+                    <li>Vähennetty raskaita <code>wc_get_product()</code>-kutsuja hakemalla otsikot, SKU:t ja metat kerralla.</li>
+                    <li>Korjattu admin-JavaScript käyttämään event delegation -mallia poistopainikkeille.</li>
+                    <li>Korjattu frontendin toimitusviestin renderöinti käyttämään tekstisolmua HTML-syötteen sijaan.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Hinnoittelu / EU Omnibus</p>
+                    <h3>WooCommerce Omnibus Price Tracker</h3>
+                    <p class="plugin-note__version">Käytössä: v1.5.6</p>
+                </div>
+                <p>
+                    Tallentaa WooCommerce-tuotteiden hintahistoriaa ja näyttää tuotesivulla 30 päivän alimman hinnan verollisena. Lisäosa huomioi myös variaatiotuotteet.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Korvattu raskas kaikkien tuotteiden läpikäynti erissä ajettavalla tietokantahaulla.</li>
+                    <li>Lisätty ajolukko, jotta päivittäinen hinta-ajo ei käynnisty päällekkäin.</li>
+                    <li>Lisätty viimeisimpien hintarivien haku mapiksi, jolloin samoja tuotteita ei tarvitse kysyä yksitellen.</li>
+                    <li>Lisätty batch insert -kirjoitus hintahistorialle ja muutosten määrän seuranta.</li>
+                    <li>Lisätty admin-näkymään ajon kesto, käsitellyt tuotteet, muuttuneet hinnat, batch-koko ja muistinkäyttö.</li>
+                    <li>Lisätty nonce- ja oikeustarkistuksia hintahistorian muokkaukseen sekä CSV-lataukseen.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">Variaatiohinta / schema</p>
+                    <h3>TP Variation Price From URL</h3>
+                    <p class="plugin-note__version">Käytössä: v1.0.3</p>
+                </div>
+                <p>
+                    Korjaa WooCommerce-tuotesivun hinnan ja schema.org Offer -tiedot, kun variaatio on esivalittu URL-parametreilla kuten <code>attribute_pa_*</code>.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty variaatioattribuuttien allowlist, jotta URL-parametreista hyväksytään vain kyseisen tuotteen attribuutit.</li>
+                    <li>Lisätty request-kohtainen välimuisti attribuuttisignatuurilla, jotta väärä variaatio ei sekoitu toiseen valintaan.</li>
+                    <li>Lisätty LiteSpeed cache vary -parametrit tunnetuille WooCommerce-attribuuteille.</li>
+                    <li>Schema Offer käyttää valitun variaation verollista hintaa, saatavuutta ja siistittyä variaatio-URL:ia.</li>
+                    <li>Lisätty pituus- ja määrärajoja URL-parametreihin väärinkäytön pienentämiseksi.</li>
+                </ul>
+            </article>
+
+            <article class="plugin-note">
+                <div class="plugin-note__header">
+                    <p class="plugin-note__type">WooCommerce-attribuutit</p>
+                    <h3>Ominaisuuksien Export/Import</h3>
+                    <p class="plugin-note__version">Käytössä: v1.5.0</p>
+                </div>
+                <p>
+                    Vie ja tuo WooCommercen ominaisuustermit CSV-muodossa. Työkalu säilyttää termien järjestyksen, mutta ei luo uusia termejä vahingossa.
+                </p>
+                <h4>Patch notes</h4>
+                <ul>
+                    <li>Lisätty nonce-tarkistukset vientiin ja tuontiin.</li>
+                    <li>Lisätty oikeustarkistus admin-toiminnoille.</li>
+                    <li>Parannettu CSV-tuonnin virheenkäsittelyä ja tiedoston lukua.</li>
+                    <li>CSV-tuonti päivittää vain olemassa olevia termejä ja varoittaa puuttuvista termeistä.</li>
+                    <li>Korvattu koko välimuistin tyhjennys kohdennetulla term cache -puhdistuksella.</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="plugin-backlog">
+            <h3>Backlog / versionmuutokset</h3>
+            <ul>
+                <li><strong>TP xEPC Add to Cart:</strong> repon nykyinen versio on <code>1.0.11</code>. Aiempi kooste perustui <code>1.0.10</code>-tason muutoksiin, joten viimeisin shortcode- ja iframe-käynnistyksen muutos kannattaa pitää omana patch note -kohtanaan.</li>
+                <li><strong>TP Store Availability Dots:</strong> versio nousi <code>2.1.5</code> -> <code>2.1.6</code>. Päivityksen jälkeen varmista tuotannossa tietokantaskeema <code>3</code> ja komponenttikohtainen rebuild-jono.</li>
+                <li><strong>Ominaisuuksien Export/Import:</strong> versio muuttui muodosta <code>1.5</code> muotoon <code>1.5.0</code>. Tämä on lähinnä metadata- ja julkaisumuotoilun tarkennus, mutta readme-changelog kannattaa yhtenäistää.</li>
+                <li><strong>TP Plugin Suite Manager:</strong> lisää myöhemmin automaattinen versionlukija plugin-headereista, jotta tämä sivu ei vaadi käsin tehtävää versionumeropäivitystä.</li>
+            </ul>
+        </div>
     </section>
 
    
