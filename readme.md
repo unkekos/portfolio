@@ -1,6 +1,20 @@
-Tämä on henkilökohtainen portfolio ja työnäytesivusto.
+# Esa Partanen - portfolio
+
+Henkilökohtainen portfolio ja työnäytesivusto, jossa esitellään WooCommerce-,
+PHP-, Python-, Linux-, Docker- sekä dataan ja tekoälyyn liittyviä projekteja.
 
 Sivusto on tehty staattisilla HTML-, CSS- ja JavaScript-tiedostoilla. Erillistä build-vaihetta ei tarvita.
+
+Live-sivusto: <https://portfolio.esasannaemmakoti.fi>
+
+## Sisältö
+
+- WooCommerce-verkkokauppojen kehitystyö ja tuotantoympäristöt
+- WordPress- ja WooCommerce-lisäosat
+- Verkkokaupan integraatiot, tuotetiedon hallinta ja Google-tuotesyötteet
+- Python-, data- ja tekoälyprojektit
+- Linux-, Docker- ja palvelinympäristöihin liittyvä osaaminen
+- Opintojen aikana tehdyt ohjelmointi-, data- ja järjestelmäsuunnittelutehtävät
 
 ## Rakenne
 
@@ -40,3 +54,10 @@ LOCAL_DEPLOYMENT.md
 ```
 
 Tiedosto on tarkoituksella jätetty gitin ulkopuolelle.
+
+## Tekninen toteutus
+
+Portfolio toimii ilman raskasta frontend-kehystä tai build-putkea. Ratkaisu on
+kevyt, helposti ylläpidettävä ja sopii staattisena sivustona julkaistavaksi
+useisiin ympäristöihin. JavaScriptiä käytetään vain pieniin käyttöliittymän
+toimintoihin, kuten vuosiluvun päivittämiseen ja mobiilivalikon avaamiseen.

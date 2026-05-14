@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
-    <title>Esa Partanen | Portfolio</title>
+    <meta name="description" content="Case study WordPress- ja WooCommerce-lisäosista: Google Product Feed, saatavuusnäytöt, bundle-tuotteet, toimitusajat, Omnibus-hintahistoria ja ylläpitotyökalut.">
+    <title>WordPress- ja WooCommerce-lisäosat | Esa Partanen</title>
     <link rel="stylesheet" href="../css/style.css?v=20260510-plugin-versions">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "WordPress- ja WooCommerce-lisäosat",
+        "author": {
+            "@type": "Person",
+            "name": "Esa Partanen"
+        },
+        "programmingLanguage": ["PHP", "JavaScript", "SQL"],
+        "runtimePlatform": "WordPress / WooCommerce",
+        "description": "Tuotantokäyttöön tehtyjä WooCommerce-lisäosia Google-feedeihin, saatavuuteen, bundle-tuotteisiin, toimitusaikoihin ja hintahistoriaan."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Esa Partanen</div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Avaa valikko" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="../index.html#home">Etusivu</a></li>
             <li><a href="../index.html#portfolio">Työnäytteet</a></li>
             <li><a href="../index.html#about">Tietoa</a></li>
@@ -20,13 +37,34 @@
         </ul>
     </nav>
 
-    <section id="pkc" class="section">
+    <section id="lisaosat" class="section">
         <h2>WordPress- ja WooCommerce-lisäosat</h2>
         <div class="alkupuhe">
             <p>
-                Alla on kooste Pienkonecenter.fi- ja Teollisuuspalvelu.fi-ympäristöihin tehdyistä omista lisäosista.
-                Kuvaukset ja patch notesit.
+                Alla on kooste Pienkonecenter.fi- ja Teollisuuspalvelu.fi-ympäristöihin tehdyistä
+                omista lisäosista. Näissä ratkaisuissa lähtökohtana on ollut tuotantoympäristön
+                tarve: suuri tuotemäärä, integraatiot, välimuistit, tietoturva, ylläpidettävyys ja
+                se, että ratkaisu tekee rajatun tehtävän luotettavasti.
             </p>
+        </div>
+
+        <div class="case-summary" aria-label="Lisäosien yhteenveto">
+            <div class="case-summary__item">
+                <strong>Rooli</strong>
+                <p>Lisäosien suunnittelu, toteutus, ylläpito ja tuotantokäytön ongelmien selvittäminen.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Ongelma</strong>
+                <p>Kaupalliset lisäosat eivät aina riittäneet suurelle tuotemäärälle, integraatioille tai yrityksen omille säännöille.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Ratkaisu</strong>
+                <p>Rajatut omat lisäosat Google-feedeihin, saatavuuteen, bundleihin, toimitusaikoihin, hintahistoriaan ja ylläpitotyökaluihin.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Tekniikat</strong>
+                <p>WordPress, WooCommerce, PHP, JavaScript, SQL, admin-post.php, AJAX, välimuistit ja taustaprosessit.</p>
+            </div>
         </div>
 
         <div class="plugin-notes">
@@ -39,7 +77,7 @@
                 <p>
                     Integroi Husqvarnan xEPC-varaosahaun WooCommerceen. Lisäosa ottaa iframe-palvelusta tulevan varaosanumeron, etsii sitä vastaavan tuotteen SKU:sta tai määritellyistä metakentistä ja lisää tuotteen ostoskoriin.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty shortcode <code>[tp_xepc_iframe]</code>, jolla iframe voidaan sijoittaa suoraan sivun sisältöön.</li>
                     <li>Estetty tupla-iframe, jos shortcode on jo sivulla ja sivu on merkitty xEPC-sivuksi.</li>
@@ -63,7 +101,7 @@
                     Lisäosa eritys piire että jos Tp rank math laittaa <code>noindex</code> tuotteelle, niin se ei päädy feediin, vaikka se olisi muuten julkaistu. 
                     Näin feedissä on vain hakukoneoptimoidut tuotteet, mikä parantaa feedin laatua ja Google Merchant Centerin hyväksyntää.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty taustagenerointi erissä suuria tuotemääriä varten.</li>
                     <li>Lisätty tuote-, variaatio- ja kategoriakohtaiset poissulut.</li>
@@ -86,7 +124,7 @@
                     Tämä on tullut tarpeen kun lisäsimme suuren määrän tuotteita, joista kaikista ei ollut saatavilla täydellisiä tietoja, 
                     mutta halusimme silti pitää ne verkkokaupassa saatavilla kuten varaosia.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Muutettu sääntö tuotekategoriasta riippumattomaksi: tarkistus perustuu tuotetyyppiin, kuvaan ja kuvaukseen.</li>
                     <li>Lisätty helper-funktio <code>tp_is_excluded_from_google()</code>, jota muut lisäosat voivat käyttää samaan poissulkulogiikkaan.</li>
@@ -104,7 +142,7 @@
                 <p>
                     Välittää Lemonsoftin toimipistekohtaiset varastosaldot tuotesivulle ja muuntaa ne käyttöön esimerkiksi TP Store Availability -näyttöä varten. Lisäosa huomioi myös variaatiotuotteet.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty piilotettu JSON-lähde, josta varastosijaintien tiedot voidaan lukea frontendissä.</li>
                     <li>Lisätty variaatiokohtainen varastosaldon vaihto, kun asiakas valitsee tuotteen variaation.</li>
@@ -123,7 +161,7 @@
                 <p>
                     Näyttää tuotesivulla toimipistekohtaisen saatavuuden pisteinä. Lisäosa tukee myös WooSB-bundle-tuotteita, joiden saatavuus lasketaan komponenttien varastosaldoista.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty bundle-komponentti-indeksi ja saatavuusvälimuisti omiin tietokantatauluihin.</li>
                     <li>Lisätty taustajono bundle-saatavuuden uudelleenrakentamiselle.</li>
@@ -142,7 +180,7 @@
                 <p>
                     Rakentaa WPClever WooSB -bundle-tuotteita tuoteattribuuttien perusteella. Attribuutista luetaan bundle-nimi, komponentin yksikköhinta ja määrä, jonka pohjalta bundle päivitetään automaattisesti.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty hallittu bundle -merkintä, jotta lisäosa ei ylikirjoita samaa SKU:ta käyttävää tavallista tuotetta.</li>
                     <li>Lisätty rebuild-lukitus päällekkäisten ajojen estämiseksi.</li>
@@ -161,7 +199,7 @@
                 <p>
                     Pitää Lemonsoft B2B -ryhmänäkyvyydet oletuksena päällä WooCommerce-tuotekategorioissa. Tavoite on, ettei uusi tuoteryhmä jää vahingossa piiloon B2B-ryhmiltä.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Uusille kategorioille asetetaan kaikki julkaistut Lemonsoft B2B -ryhmät, jos käyttäjä ei valitse ryhmiä erikseen.</li>
                     <li>Lisätty Products-valikon alle hallintasivu massapäivitykselle.</li>
@@ -180,7 +218,7 @@
                 <p>
                     Kokoaa omat WordPress-lisäosat yhteen hallintanäkymään. Näkymä näyttää lisäosan version, tilan, asetussivun, GitHub-repon ja manuaalisen päivitystarkistuksen.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty oma admin-valikko "Custom lisäosat".</li>
                     <li>Lisätty yleiskatsaus, jossa näkyvät hallitut lisäosat, versiot ja aktiivisuustila.</li>
@@ -199,7 +237,7 @@
                 <p>
                     Näyttää tuotemerkkikohtaisia toimitusaikoja ja hakee ennakkomyyntiin liittyviä arvoja tuotteilta ja variaatioilta. Hallintanäkymä auttaa ylläpitämään toimitusaikasääntöjä.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Parannettu ennakkomyyntituotteiden hakua suorilla SQL-kyselyillä, sivutuksella ja välimuistilla.</li>
                     <li>Lisätty stale-cache-tuki, jotta hallintanäkymä voi näyttää vanhan tuloksen samalla kun uutta rakennetaan.</li>
@@ -218,7 +256,7 @@
                 <p>
                     Tallentaa WooCommerce-tuotteiden hintahistoriaa ja näyttää tuotesivulla 30 päivän alimman hinnan verollisena. Lisäosa huomioi myös variaatiotuotteet.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Korvattu raskas kaikkien tuotteiden läpikäynti erissä ajettavalla tietokantahaulla.</li>
                     <li>Lisätty ajolukko, jotta päivittäinen hinta-ajo ei käynnisty päällekkäin.</li>
@@ -238,7 +276,7 @@
                 <p>
                     Korjaa WooCommerce-tuotesivun hinnan ja schema.org Offer -tiedot, kun variaatio on esivalittu URL-parametreilla kuten <code>attribute_pa_*</code>.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty variaatioattribuuttien allowlist, jotta URL-parametreista hyväksytään vain kyseisen tuotteen attribuutit.</li>
                     <li>Lisätty request-kohtainen välimuisti attribuuttisignatuurilla, jotta väärä variaatio ei sekoitu toiseen valintaan.</li>
@@ -257,7 +295,7 @@
                 <p>
                     Vie ja tuo WooCommercen ominaisuustermit CSV-muodossa. Työkalu säilyttää termien järjestyksen, mutta ei luo uusia termejä vahingossa.
                 </p>
-                <h4>Patch notes</h4>
+                <h4>Tekniset yksityiskohdat</h4>
                 <ul>
                     <li>Lisätty nonce-tarkistukset vientiin ja tuontiin.</li>
                     <li>Lisätty oikeustarkistus admin-toiminnoille.</li>
@@ -269,7 +307,18 @@
         </div>
 
         <div class="plugin-backlog">
-            <h3>Backlog / versionmuutokset</h3>
+            <h3>Mitä opin lisäosakehityksestä</h3>
+            <p>
+                Tuotantokäytössä oleva WooCommerce-lisäosa ei saa olla pelkkä nopea paikkaus.
+                Sen pitää tarkistaa käyttöoikeudet, validoida syötteet, toimia välimuistien kanssa,
+                käsitellä virhetilanteet hallitusti ja tehdä raskaat työt taustalla silloin, kun
+                tuotemäärä kasvaa suureksi. Tämä on vahvistanut tapaani rakentaa pieniä, rajattuja
+                ja ylläpidettäviä ratkaisuja oikeaan liiketoimintatarpeeseen.
+            </p>
+        </div>
+
+        <div class="plugin-backlog">
+            <h3>Ylläpidon huomioita</h3>
             <ul>
                 <li><strong>TP xEPC Add to Cart:</strong> repon nykyinen versio on <code>1.0.11</code>. Aiempi kooste perustui <code>1.0.10</code>-tason muutoksiin, joten viimeisin shortcode- ja iframe-käynnistyksen muutos kannattaa pitää omana patch note -kohtanaan.</li>
                 <li><strong>TP Store Availability Dots:</strong> versio nousi <code>2.1.5</code> -> <code>2.1.6</code>. Päivityksen jälkeen varmista tuotannossa tietokantaskeema <code>3</code> ja komponenttikohtainen rebuild-jono.</li>

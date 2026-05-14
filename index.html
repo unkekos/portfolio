@@ -3,16 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
-    <title>Esa Partanen | Portfolio</title>
+    <meta name="description" content="Esa Partanen - WooCommerce-, integraatio-, automaatio- ja dataratkaisujen portfolio.">
+    <title>Esa Partanen | WooCommerce-, integraatio- ja dataratkaisut</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Esa Partanen",
+        "url": "https://portfolio.esasannaemmakoti.fi",
+        "sameAs": [
+            "https://github.com/unkekos",
+            "https://www.linkedin.com/in/esa-partanen-aa6897323/"
+        ],
+        "knowsAbout": [
+            "WooCommerce",
+            "WordPress",
+            "PHP",
+            "Python",
+            "Docker",
+            "Linux-palvelinympäristöt",
+            "Verkkokaupan integraatiot",
+            "Datan käsittely",
+            "Tekoälyratkaisut"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Esa Partanen | Portfolio",
+        "url": "https://portfolio.esasannaemmakoti.fi",
+        "description": "Portfolio WooCommerce-, integraatio-, automaatio- ja dataratkaisuista."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Esa Partanen</div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Avaa valikko" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="#home">Etusivu</a></li>
             <li><a href="#portfolio">Työnäytteet</a></li>
             <li><a href="#about">Tietoa</a></li>
@@ -23,7 +58,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hei, olen <span class="highlight">Esa Partanen</span></h1>
-            <p>Web-kehittäjä / Linux-harrastaja / Koodaaja</p>
+            <p>Kehitän WooCommerce-verkkokauppoja, integraatioita, automaatioita ja dataan perustuvia ratkaisuja tuotantoympäristöihin.</p>
             <a href="#portfolio" class="btn">Katso työnäytteet</a>
         </div>
     </section>
@@ -34,42 +69,42 @@
             
             <a class="project-card" href="pages/projects.html">
                 <div class="card-image">
-                    <img src="images/koti/nibe-logo-web.svg" alt="nibe" style="max-width: 100%; height: auto;">
+                    <img src="images/koti/nibe-logo-web.svg" alt="Nibe-lämpöpumpun ohjausjärjestelmän logo" style="max-width: 100%; height: auto;">
                 </div>
                 <div class="card-info">
-                    <h3>Kotiautomatio nn-mpc</h3>
-                    <p>Lyhyt kuvaus projektista. Mitä teknologioita käytit? Esim. Python, Linux, Docker.</p>
+                    <h3>Kotiautomaatio NN-MPC</h3>
+                    <p>Älykäs lämmityksen optimointijärjestelmä, jossa Python-, PyTorch-, Docker- ja Home Assistant -pohjainen malli ennustaa sisälämpötilaa ja optimoi Nibe-lämpöpumpun ohjausta.</p>
                 </div>
             </a>
 
             <a class="project-card" href="pages/pkc.html">
                 <div class="card-image">
-                    <img src="images/pkc/PKC_logo_white_icon.png" alt="Pienkonecenter.fi">
+                    <img src="images/pkc/PKC_logo_white_icon.png" alt="Pienkonecenter.fi-verkkokaupan logo">
                 </div>
                 <div class="card-info">
                     <h3>Pienkonecenter.fi</h3>
-                    <p>Verkkokauppa, jossa myydään pienkoneita ja tarvikkeita.</p>
+                    <p>WooCommerce-verkkokaupan kehitystyötä: tuotetiedon hallintaa, hakuratkaisuja, SEO:ta, toimituslogiikkaa, integraatioita ja suorituskyvyn arviointia.</p>
                    
                 </div>
             </a>
             <a class="project-card" href="pages/tp.html">
                 <div class="card-image">
-                    <img src="images/tp/rtp-icon.png" alt="Teollisuuspalvelu.fi">
+                    <img src="images/tp/rtp-icon.png" alt="Teollisuuspalvelu.fi-verkkokaupan logo">
                 </div>
                 <div class="card-info">
                     <h3>Teollisuuspalvelu.fi</h3>
-                    <p>Verkkosivusto, jossa tarjotaan teollisuuden palveluita ja pienkoneita.</p>
+                    <p>MyCashflowsta WooCommerceen tehty migraatio, tuotantoympäristön optimointi ja räätälöityjen verkkokauppatoimintojen jatkokehitys.</p>
                 </div>
             </a>
 
                         <a class="project-card" href="pages/koulu.html">
                 <div class="card-image">
-                    <img src="images/koulu/kamk_logo.jpg" alt="Koulu">
+                    <img src="images/koulu/kamk_logo.jpg" alt="Kajaanin ammattikorkeakoulun logo">
                 </div>
                 <div class="card-info">
-                    <h3>Tieto- ja viestintätekniikan insinööri, Datasta teköälyyn</h3>
-                    <p>Opiskelen tällä hetkellä Kajaanin ammattikorkeakoulussa tieoto ja viestintätekniikan insinööriksi.</p>
-                    <p>Koulutuksen suuntautuminen on datasta teköälyyn joka erikoistut datan hallintaan ja käsittelyyn sekä tekoälyratkaisujen kehittämiseen.</p>
+                    <h3>Tieto- ja viestintätekniikan insinööri, Datasta tekoälyyn</h3>
+                    <p>Opiskelen Kajaanin ammattikorkeakoulussa tieto- ja viestintätekniikan insinööriksi.</p>
+                    <p>Koulutuksen suuntautuminen on Datasta tekoälyyn, joka erikoistuu datan hallintaan, käsittelyyn ja tekoälyratkaisujen kehittämiseen.</p>
 
                 </div>
             </a>
@@ -77,11 +112,11 @@
             
                         <a class="project-card" href="pages/lisaosat.html">
                 <div class="card-image">
-                    <img src="/images/wp_addons/wp_log.jfif" alt="Logo lisäosat">
+                    <img src="images/wp_addons/wp_log.jfif" alt="WordPress- ja WooCommerce-lisäosien tunnuskuva">
                 </div>
                 <div class="card-info">
-                    <h3>Tässä lista erinäisitä lisäosista</h3>
-                    <p>Listaus ja patch notes</p>
+                    <h3>WordPress- ja WooCommerce-lisäosat</h3>
+                    <p>Tuotantokäyttöön tehtyjä lisäosia esimerkiksi Google-feedeihin, saatavuusnäyttöihin, bundleihin, toimitusaikoihin ja hintahistoriaan.</p>
 
                 </div>
             </a>
@@ -92,11 +127,15 @@
         <h2>Tietoa minusta</h2>
         <div class="about-content">
             <p>
-                Olen intohimoinen ohjelmistokehittäjä ja Linux-harrastaja, jolla on vahva tausta verkkokaupparatkaisuista (WooCommerce) sekä IoT-järjestelmien rakentamisesta. 
-                Yhdistän työssäni liiketoimintaymmärryksen tekniseen syväosaamiseen - oli kyseessä sitten verkkokaupan konversio-optimointi tai kodin lämmitysjärjestelmän tekoälyohjaus.
+                Olen käytännönläheinen ohjelmistokehittäjä, jolla on kokemusta WooCommerce-verkkokaupoista,
+                räätälöidyistä lisäosista, integraatioista, Linux-palvelinympäristöistä, Dockerista ja
+                datan käsittelystä. Yhdistän työssäni teknisen toteutuksen liiketoiminnan tarpeisiin:
+                verkkokaupan pitää olla nopea, ylläpidettävä, turvallinen ja asiakkaalle selkeä.
             </p>
             <p>
-                Vapaa-ajallani kehitän omia automaatioratkaisuja ja ylläpidän palvelimia. Minua motivoi monimutkaisten ongelmien ratkaiseminen ja prosessien tehostaminen koodin avulla.
+                Vapaa-ajallani kehitän omia automaatioratkaisuja, ylläpidän palvelimia ja rakennan
+                dataan perustuvia ratkaisuja. Minua motivoi monimutkaisten ongelmien selvittäminen
+                ja prosessien tehostaminen koodin avulla.
             </p>
             <ul class="skills-list">
                 <li>Linux</li>
@@ -126,6 +165,6 @@
         <p>&copy; <span id="year"></span> Esa Partanen. Kaikki oikeudet pidätetään.</p>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

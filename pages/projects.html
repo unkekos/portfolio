@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
-    <title>Esa Partanen | Portfolio</title>
+    <meta name="description" content="Case study älykkäästä lämmityksen ohjauksesta: Python, PyTorch, Docker, Home Assistant, DuckDB ja NN-MPC-pohjainen optimointi.">
+    <title>Älykäs lämmityksen ohjaus NN-MPC | Esa Partanen</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Älykäs lämmityksen ohjaus NN-MPC",
+        "author": {
+            "@type": "Person",
+            "name": "Esa Partanen"
+        },
+        "about": "Python-, PyTorch-, Docker- ja Home Assistant -pohjainen lämmityksen optimointijärjestelmä."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Esa Partanen</div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Avaa valikko" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="../index.html#home">Etusivu</a></li>
             <li><a href="../index.html#portfolio">Työnäytteet</a></li>
             <li><a href="../index.html#about">Tietoa</a></li>
@@ -32,10 +47,33 @@
             </p>
         </div>
 
+        <div class="case-summary" aria-label="Projektin yhteenveto">
+            <div class="case-summary__item">
+                <strong>Rooli</strong>
+                <p>Järjestelmän suunnittelu, datankeruu, mallin koulutus ja ohjauslogiikan toteutus.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Ongelma</strong>
+                <p>Lämmitystä piti ohjata ennakoivasti sääennusteen, sisälämpötilan ja sähkön hinnan mukaan.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Ratkaisu</strong>
+                <p>Neuroverkkomalli ennustaa sisälämpötilaa ja MPC-planneri tuottaa ohjaussuunnitelman lämpöpumpulle.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Tekniikat</strong>
+                <p>Python, PyTorch, Docker, Home Assistant, DuckDB, InfluxDB.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Tulokset</strong>
+                <p>24 tunnin ennusteessa noin 0.09 asteen MAE-tarkkuus testidatalla.</p>
+            </div>
+        </div>
+
         <div class="leipäteksti">
             <h3>Mallin suorituskyky</h3>
             <p>
-                Alla oleva logiote näyttää koulutetun mallin tarkkuuden. Järjestelmä pystyy ennustamaan sisälämpötilan 24 tunnin päähän (H=96 steps) noin 0.09 asteen tarkkuudella (MAE), mikä mahdollistaa tarkan lämmitysenergian varaamisen halvoille sähkötunneille.
+                Alla olevat mittarit näyttävät koulutetun mallin tarkkuuden. Järjestelmä pystyy ennustamaan sisälämpötilan 24 tunnin päähän (H=96 steps) noin 0.09 asteen tarkkuudella (MAE), mikä mahdollistaa tarkan lämmitysenergian varaamisen halvoille sähkötunneille.
             </p>
             
             <div class="code-example">
@@ -68,6 +106,14 @@ H= 96 steps  MAE=0.0901  RMSE=0.1181
                 <li><strong>Planner:</strong> Generoi optimaalisen lämmityssuunnitelman (MPC) ja visualisoi sen.</li>
                 <li><strong>Controller:</strong> Ohjaa lämpöpumppua Home Assistant API:n kautta.</li>
             </ul>
+
+            <h3>Mitä opin projektista</h3>
+            <p>
+                Projekti opetti yhdistämään koneoppimisen, aikasarjadatan, Docker-pohjaisen
+                palveluarkkitehtuurin ja oikean kodin automaatiojärjestelmän. Tärkein oppi oli, että
+                ennustemallin lisäksi tuotantokäytössä tarvitaan luotettava datankeruu, selkeä
+                ohjauslogiikka ja turvallinen tapa viedä mallin päätökset fyysiseen järjestelmään.
+            </p>
         </div>
     </section>
    
@@ -80,6 +126,6 @@ H= 96 steps  MAE=0.0901  RMSE=0.1181
         <p>&copy; <span id="year"></span> Esa Partanen. Kaikki oikeudet pidätetään.</p>
     </footer>
 
-    <script src="../js/cript.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

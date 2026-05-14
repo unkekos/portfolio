@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
-    <title>Esa Partanen | Portfolio</title>
+    <meta name="description" content="Opintojen aikana tehtyjä harjoituksia ja projekteja: Python, datan analysointi, tietokannat, web-kehitys, järjestelmäsuunnittelu ja dokumentointi.">
+    <title>Opinnot ja kouluprojektit | Esa Partanen</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Opintojen harjoitukset ja projektit",
+        "author": {
+            "@type": "Person",
+            "name": "Esa Partanen"
+        },
+        "about": "Pythonin, datan analysoinnin, tietokantojen, web-kehityksen, järjestelmäsuunnittelun ja dokumentoinnin harjoitukset."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Esa Partanen</div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Avaa valikko" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="../index.html#home">Etusivu</a></li>
             <li><a href="../index.html#portfolio">Työnäytteet</a></li>
             <li><a href="../index.html#about">Tietoa</a></li>
@@ -22,12 +37,254 @@
 
    
 
-    <section id="fill" class="section">
-        <h2>joku filli </h2>
+    <section id="koulu" class="section">
+        <h2>Opintojen aikana tehdyt harjoitukset, projektit ja osaamisen kehittyminen</h2>
         <div class="alkupuhe">
             <p>
-                Psdaaaaaaaaaaaaaaaaaaaa asdqwer qwojfsapf jaioåfg a0shin giuoshg sáijfg i0adsohjfia¨shgf9ioásg h aåsdogaï sadsa
-                sdaaaaaaaaaaaaaaaaaaaa asdqwer qwojfsapf jaioåfg a0shin giuoshg sáijfg i0adsohjfia¨shgf9ioásg h aåsdogaï sadsa
+                Opintojeni aikana olen päässyt harjoittelemaan monipuolisesti ohjelmistokehitystä,
+                tietojenkäsittelyä, järjestelmäsuunnittelua, tiedon analysointia,
+                verkkoteknologioita sekä projektityöskentelyä. Tehtävissä on yhdistynyt sekä
+                tekninen toteutus että käytännönläheinen ongelmanratkaisu. Olen pyrkinyt tekemään
+                tehtävät niin, että ne eivät jää pelkäksi koulutehtäväksi, vaan niissä harjoitellaan
+                oikeassa työelämässä tarvittavia taitoja: järjestelmällistä suunnittelua,
+                dokumentointia, virheiden selvittämistä, tietoturvan huomioimista, selkeää
+                rakennetta ja toimivaa lopputulosta.
+            </p>
+        </div>
+
+        <div class="case-summary" aria-label="Opintojen yhteenveto">
+            <div class="case-summary__item">
+                <strong>Painopiste</strong>
+                <p>Tieto- ja viestintätekniikka, Datasta tekoälyyn -suuntautuminen.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Harjoitukset</strong>
+                <p>Python, datan analysointi, SQLite, DuckDB, UWB-data, visualisointi ja web-kehitys.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Työskentely</strong>
+                <p>Tehtävien pilkkominen, testaaminen, dokumentointi ja järjestelmällinen ongelmanratkaisu.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Tavoite</strong>
+                <p>Kehittää osaamista tuotantokelpoisiin ohjelmisto-, data- ja automaatioratkaisuihin.</p>
+            </div>
+        </div>
+
+        <div class="leipäteksti">
+            <h3>Ohjelmointi Pythonilla</h3>
+            <p>
+                Yksi keskeinen osa opintojani on ollut ohjelmoinnin perusteiden ja jatkotason
+                asioiden harjoittelu Pythonilla. Python-tehtävissä olen käsitellyt muun muassa
+                tiedostojen lukemista, tekstidatan käsittelyä, muuttujia, listoja, sanakirjoja,
+                ehtolauseita, silmukoita, funktioita ja virheenkäsittelyä. Olen tehnyt harjoituksia,
+                joissa ohjelma lukee dataa tiedostoista, muokkaa sitä, laskee arvoja ja tuottaa
+                tuloksia käyttäjälle. Näissä tehtävissä on korostunut erityisesti se, että ohjelman
+                tulee olla looginen, helposti luettava ja sellainen, että sen toimintaa pystyy
+                myöhemmin jatkokehittämään.
+            </p>
+
+            <h3>Datan analysointi</h3>
+            <p>
+                Pythonin yhteydessä olen harjoitellut myös datan analysointia. Yhdessä
+                opintotehtävässä analysoin ping-dataa tekstitiedostosta. Tehtävässä tuli lukea
+                suurta tekstiaineistoa, poimia siitä vasteaikoja, tunnistaa epäonnistuneita pyyntöjä,
+                laskea tilastollisia tunnuslukuja ja havaita poikkeavia arvoja. Analyysissä
+                käytettiin muun muassa keskiarvoja, hajontaa, mediaania sekä IQR-menetelmää
+                poikkeamien tunnistamiseen. Lisäksi tuloksia tarkasteltiin visuaalisesti, jotta
+                pelkät numerot eivät jäisi irrallisiksi. Tämä tehtävä kehitti erityisesti kykyä
+                käsitellä raakadataa ja muuttaa se ymmärrettävään muotoon.
+            </p>
+            <p>
+                Olen tehnyt myös laajemman JupyterHub-ympäristössä toteutetun analyysitehtävän,
+                jossa käsiteltiin suurta ping-aineistoa vaiheittain. Tehtävässä jokainen analyysin
+                osa tuli toteuttaa omassa solussaan ja tietyillä muuttujanimillä, koska
+                automaattinen tarkistus arvioi työn etenemistä. Tämä opetti huolellisuutta, koska
+                ohjelmakoodin oikea toiminta ei yksin riittänyt, vaan myös rakenne, muuttujien nimet
+                ja tehtävänannon tarkka noudattaminen olivat tärkeitä. Tällainen työskentely
+                muistuttaa hyvin paljon oikeaa ohjelmistokehitystä, jossa koodin täytyy sopia osaksi
+                suurempaa järjestelmää ja noudattaa sovittuja rajapintoja.
+            </p>
+
+            <h3>Tietokannat ja datankäsittely</h3>
+            <p>
+                Tietokantojen osalta olen harjoitellut sekä relaatiotietokantojen perusteita että
+                käytännön datankäsittelyä. Olen tehnyt harjoituksen, jossa luotiin yksinkertainen
+                SQLite-tietokanta käyttäjätunnusten ja henkilötietojen tallentamiseen. Tässä
+                tehtävässä harjoiteltiin tietokannan rakennetta, taulujen luontia, tietojen
+                lisäämistä, hakemista ja mahdollisesti päivittämistä. Samalla tehtävä toi esille
+                tietoturvaan liittyviä kysymyksiä, kuten sen, miten käyttäjätietoja tulisi käsitellä
+                vastuullisesti ja miksi esimerkiksi salasanoja ei pidä tallentaa selväkielisinä.
+                Tietokantaharjoitukset ovat auttaneet ymmärtämään, miten sovelluksen taustalla oleva
+                tieto kannattaa mallintaa ja tallentaa.
+            </p>
+            <p>
+                Olen käyttänyt myös DuckDB:tä datan käsittelyssä ja analysoinnissa. DuckDB:n avulla
+                olen harjoitellut tehokasta taulumuotoisen datan käsittelyä suoraan ohjelmasta
+                käsin. Yhdessä projektissa käsittelin liikedataa, jossa oli aikaleimoja ja
+                koordinaatteja. Tässä työssä olen suodattanut dataa, tallentanut sitä
+                tietokantatauluihin ja hyödyntänyt sitä myöhemmin visualisoinnissa. Tällaiset
+                tehtävät ovat kehittäneet ymmärrystä siitä, miten raakadataa voidaan jalostaa
+                käyttökelpoiseksi tiedoksi ja miten tietokanta voi toimia osana suurempaa
+                ohjelmakokonaisuutta.
+            </p>
+
+            <h3>UWB-paikannusdata ja huoltotarpeen seuranta</h3>
+            <p>
+                Yksi käytännönläheinen ohjelmointiprojekti liittyi UWB-paikannusdataan ja
+                peräkärryjen huoltotarpeen seurantaan. Projektissa käsiteltiin liikedataa, jonka
+                perusteella voitiin laskea kuljettuja matkoja ja arvioida huoltotarvetta. Ohjelmaan
+                lisättiin toimintoja, joilla voidaan päivittää ajomatkoja, kirjata huoltotapahtumia,
+                tallentaa tietoa tietokantaan ja tuottaa raportteja. Tällainen projekti oli hyvä
+                esimerkki siitä, miten ohjelmointia voidaan käyttää oikean ongelman ratkaisemiseen.
+                Siinä yhdistyivät datan käsittely, tietokanta, raportointi ja käyttöliittymän
+                suunnittelu.
+            </p>
+
+            <h3>Visualisointi</h3>
+            <p>
+                Olen tehnyt myös visualisointiin liittyviä harjoituksia. Yhdessä kokonaisuudessa
+                ohjelma luki tietokannasta saatavilla olevia tauluja ja käyttäjä pystyi valitsemaan,
+                mitä dataa haluttiin animoida. Visualisointi toteutettiin Pygamen avulla, jolloin
+                liikedata saatiin näkyväksi graafisessa muodossa. Tämä opetti, että data ei ole
+                hyödyllistä vain numeroina tai taulukoina, vaan sitä voidaan esittää myös
+                visuaalisesti, jolloin kokonaisuuden hahmottaminen helpottuu. Samalla harjoittelin
+                ohjelman jakamista selkeisiin osiin: yksi ohjelma käsittelee ja tallentaa datan,
+                toinen vastaa visualisoinnista.
+            </p>
+
+            <h3>Web-kehitys ja portfolio</h3>
+            <p>
+                Web-kehityksen puolella olen harjoitellut HTML:n, CSS:n ja JavaScriptin käyttöä.
+                Olen tehnyt muun muassa musiikkisoittimeen liittyvän miniprojektin, jossa
+                toteutettiin käyttöliittymä, omat kontrollit, äänen toisto ja REST API:n
+                hyödyntäminen. Tässä projektissa harjoiteltiin selainpohjaisen sovelluksen
+                rakennetta, käyttöliittymän toiminnallisuutta ja JavaScriptin tapahtumankäsittelyä.
+                Projekti kehitti ymmärrystä siitä, miten selain, käyttöliittymä ja taustalla oleva
+                data tai rajapinta toimivat yhdessä.
+            </p>
+            <p>
+                Portfolion rakentaminen itsessään on ollut myös osa oppimista. Olen tehnyt HTML- ja
+                CSS-pohjaista portfoliota, jossa esitellään omaa osaamista, työnäytteitä ja
+                yhteystietoja. Portfolion tekemisessä olen harjoitellut sivurakennetta, navigaatiota,
+                responsiivisuutta, tyylittelyä, metatietoja ja sisällön esittämistä selkeästi.
+                Samalla olen oppinut, että tekninen osaaminen ei yksin riitä, vaan oma työ pitää
+                osata myös esitellä ymmärrettävästi. Hyvä portfolio kertoo, mitä on tehty, miksi se
+                on tehty ja mitä osaamista työ osoittaa.
+            </p>
+
+            <h3>Järjestelmäsuunnittelu ja vaatimukset</h3>
+            <p>
+                Järjestelmäsuunnittelun puolella olen tehnyt arkkitehtuurimäärittelyyn liittyviä
+                tehtäviä. Näissä tehtävissä on harjoiteltu järjestelmän kokonaisuuden hahmottamista,
+                vaatimusten tunnistamista, eri osakokonaisuuksien kuvaamista ja dokumentointia.
+                Yhdessä tehtävässä suunnittelukohteena oli huonekalu- tai sisustussuunnitteluun
+                liittyvä järjestelmä, jossa tuli huomioida useampi osakokonaisuus. Tällaiset
+                tehtävät ovat opettaneet, että ohjelmistokehitys ei ala koodista, vaan tarpeiden,
+                käyttäjien, toimintaympäristön ja järjestelmän rakenteen ymmärtämisestä.
+            </p>
+            <p>
+                Olen harjoitellut myös käyttäjä- ja järjestelmävaatimusten määrittelyä.
+                Vaatimusmäärittelyssä olen oppinut erottamaan, mitä käyttäjä tarvitsee, mitä
+                järjestelmän pitää tehdä ja millaisia rajoitteita tai laatutekijöitä järjestelmällä
+                on. Käyttäjävaatimukset kuvaavat asioita käyttäjän näkökulmasta, kun taas
+                järjestelmävaatimukset muuttavat tarpeet teknisemmiksi vaatimuksiksi. Tämä on tärkeä
+                taito, koska huonosti määritellyt vaatimukset johtavat helposti siihen, että
+                toteutetaan väärä ratkaisu tai järjestelmästä tulee vaikea käyttää.
+            </p>
+
+            <h3>Projektityöskentely ja ongelmanratkaisu</h3>
+            <p>
+                Projektityöskentelyä olen harjoitellut muun muassa Projektiopinnot 1
+                -kokonaisuudessa. Siinä olen dokumentoinut omaa työskentelyäni, arviointikriteerejä,
+                projektin etenemistä ja aikataulua. Projektityöskentelyssä tärkeää on ollut oman
+                työn suunnittelu, etenemisen seuraaminen ja se, että osaa arvioida omaa tekemistään
+                realistisesti. Projektin dokumentointi on opettanut, että työ ei ole valmis vain
+                silloin, kun tekninen toteutus toimii, vaan myös silloin, kun sen eteneminen,
+                päätökset ja tulokset on kuvattu ymmärrettävästi.
+            </p>
+            <p>
+                Opintojen aikana olen harjoitellut myös ongelmanratkaisua tilanteissa, joissa valmis
+                vastaus ei ole suoraan näkyvissä. Esimerkiksi ohjelmointitehtävissä virhe voi johtua
+                syntaksista, väärästä muuttujasta, virheellisestä datasta tai siitä, että ohjelman
+                logiikka ei vastaa tehtävänantoa. Näissä tilanteissa olen oppinut etenemään
+                vaiheittain: ensin selvitetään, mitä ohjelman pitäisi tehdä, sitten tarkistetaan mitä
+                se oikeasti tekee, ja lopuksi rajataan virheen syy mahdollisimman tarkasti. Tämä on
+                kehittänyt järjestelmällistä debuggausajattelua.
+            </p>
+
+            <h3>Tietoturva ja dokumentointi</h3>
+            <p>
+                Tietoturva on tullut esille useissa eri yhteyksissä. Käyttäjätietojen,
+                kirjautumistietojen ja verkkosovellusten käsittelyssä on tärkeää ymmärtää, että
+                kaikki käyttäjältä tuleva syöte voi olla virheellistä tai haitallista. Olen oppinut
+                huomioimaan esimerkiksi syötteen validoinnin, sanitoinnin, käyttöoikeuksien
+                tarkistamisen ja turvallisen tulostamisen. Vaikka koulutehtävät ovat usein rajattuja,
+                olen pyrkinyt ajattelemaan ratkaisuja myös tuotantoympäristön näkökulmasta: miten
+                tämä toimisi, jos käyttäjiä olisi oikeasti paljon ja data olisi tärkeää?
+            </p>
+            <p>
+                Opintojen aikana olen saanut myös kokemusta dokumentoinnista. Olen kirjoittanut
+                tehtävien vaiheita auki, kuvannut ohjelmien toimintaa ja perustellut ratkaisuja.
+                Dokumentoinnissa olen oppinut, että hyvä tekninen teksti ei ole pelkkää koodin
+                selittämistä, vaan sen pitää auttaa lukijaa ymmärtämään kokonaisuus. Dokumentaation
+                avulla toinen henkilö voi jatkaa työtä, arvioida sitä tai ottaa ratkaisun käyttöön.
+                Tämä on tärkeää erityisesti ohjelmistokehityksessä, jossa työ tehdään usein osana
+                tiimiä tai pidempää projektia.
+            </p>
+
+            <h3>Viestintä, ryhmätyö ja liiketoiminnan ymmärtäminen</h3>
+            <p>
+                Opintoihin on kuulunut myös ryhmätyöhön, viestintään ja työelämän tilanteisiin
+                liittyviä tehtäviä. Olen esimerkiksi suunnitellut verkkotapahtumaa monikulttuuriselle
+                työtiimille, jonka tavoitteena oli parantaa viestintää ja työyhteisön sosiaalista
+                ilmapiiriä. Tällaisessa tehtävässä tekninen osaaminen ei ole pääroolissa, vaan
+                tärkeää on ymmärtää ihmisten välistä vuorovaikutusta, erilaisia taustoja ja sitä,
+                miten toimiva viestintä vaikuttaa työympäristöön. Tämä on tukenut myös
+                projektityöskentelyä, koska ohjelmistokehitys on usein yhteistyötä eri ihmisten ja
+                roolien välillä.
+            </p>
+            <p>
+                Lisäksi olen harjoitellut liiketoimintaan ja taloushallintoon liittyviä asioita.
+                Taustaani kuuluu laskentatoimen opintoja ammattikorkeakoulussa, ja tämä näkyy siinä,
+                että pystyn tarkastelemaan teknisiä ratkaisuja myös liiketoiminnan näkökulmasta.
+                Taloushallinnon ymmärrys auttaa hahmottamaan esimerkiksi kustannuksia, hinnoittelua,
+                raportointia ja järjestelmien tuottaman tiedon merkitystä päätöksenteossa. Tämä
+                yhdistyy hyvin ohjelmistokehitykseen, koska monet järjestelmät rakennetaan lopulta
+                tukemaan liiketoimintaa, prosesseja ja tiedolla johtamista.
+            </p>
+
+            <h3>Osaamisen kehittyminen</h3>
+            <p>
+                Kokonaisuutena opintoni ovat kehittäneet minusta käytännönläheisen tekijän, joka
+                pystyy yhdistämään ohjelmoinnin, datan käsittelyn, tietokannat, web-tekniikat,
+                dokumentoinnin ja järjestelmäsuunnittelun. Olen oppinut, että hyvä ratkaisu ei ole
+                vain sellainen, joka toimii omalla koneella kerran, vaan sellainen, joka on
+                ymmärrettävä, ylläpidettävä, turvallinen ja jatkokehityskelpoinen. Tämä ajattelutapa
+                on vahvistunut erityisesti niissä tehtävissä, joissa on pitänyt käsitellä oikean
+                kaltaista dataa, suunnitella ohjelman rakennetta tai dokumentoida järjestelmän
+                toimintaa.
+            </p>
+            <p>
+                Opintojen aikana tekemäni harjoitukset ovat antaneet hyvän pohjan
+                ohjelmistokehitykseen ja tekniseen ongelmanratkaisuun. Olen saanut kokemusta sekä
+                pienistä yksittäisistä harjoituksista että laajemmista kokonaisuuksista, joissa
+                useampi teknologia ja työvaihe liittyvät yhteen. Erityisesti Python, tietokannat,
+                datan analysointi, web-kehitys, projektityöskentely ja dokumentointi ovat
+                muodostuneet vahvoiksi osa-alueiksi. Näitä taitoja haluan kehittää edelleen ja
+                soveltaa käytännön projekteissa, joissa teknisellä ratkaisulla on selkeä hyöty
+                käyttäjälle tai organisaatiolle.
+            </p>
+
+            <h3>Oma tapani oppia ja tehdä</h3>
+            <p>
+                Opintojen tärkein anti on ollut se, että olen oppinut ajattelemaan ohjelmointia
+                kokonaisuutena. Koodi on vain yksi osa ratkaisua. Ennen koodia pitää ymmärtää
+                ongelma, käyttäjä, data ja tavoite. Toteutuksessa pitää huomioida rakenne, tietoturva
+                ja ylläpidettävyys. Lopuksi työ pitää pystyä dokumentoimaan ja esittelemään niin,
+                että myös muut ymmärtävät, mitä on tehty ja miksi. Tämä kokonaisuus kuvaa hyvin omaa
+                tapaani oppia ja tehdä: haluan ymmärtää asian kunnolla, rakentaa toimivan ratkaisun
+                ja kehittää sitä vaiheittain paremmaksi.
             </p>
         </div>
     </section>

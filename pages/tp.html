@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esa Partanen - Portfolio ja työnäytteet">
-    <title>Esa Partanen | Portfolio</title>
+    <meta name="description" content="Case study Teollisuuspalvelu.fi-verkkokaupan migraatiosta, WooCommerce-kehityksestä, palvelinoptimoinnista ja tuotantoympäristön parantamisesta.">
+    <title>Teollisuuspalvelu.fi | WooCommerce-migraatio ja suorituskyky | Esa Partanen</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="htTeollisuuspalvelus://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Teollisuuspalvelu.fi-verkkokaupan migraatio ja optimointi",
+        "author": {
+            "@type": "Person",
+            "name": "Esa Partanen"
+        },
+        "about": "MyCashflowsta WooCommerceen tehty verkkokauppamigraatio, tekninen koordinointi, suorituskykyoptimointi ja räätälöity WooCommerce-kehitys."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Esa Partanen</div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Avaa valikko" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="../index.html#home">Etusivu</a></li>
             <li><a href="../index.html#portfolio">Työnäytteet</a></li>
             <li><a href="../index.html#about">Tietoa</a></li>
@@ -22,8 +37,31 @@
 
    
 
-    <section id="pkc" class="section">
+    <section id="tp" class="section">
         <h2>Teollisuuspalvelu.fi</h2>
+        <div class="case-summary" aria-label="Projektin yhteenveto">
+            <div class="case-summary__item">
+                <strong>Rooli</strong>
+                <p>Tekninen vastuuhenkilö, yritysjohdon ja toteuttajien välinen linkki sekä jatkokehityksen tekijä.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Ongelma</strong>
+                <p>Verkkokauppa piti migroida MyCashflowsta WooCommerceen ja saada tuotantokelpoiseksi integraatioiden kanssa.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Ratkaisu</strong>
+                <p>Hallittu migraatio, OpenLiteSpeed-pohjainen palvelinympäristö, välimuistit ja räätälöidyt WooCommerce-toiminnot.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Tekniikat</strong>
+                <p>WordPress, WooCommerce, PHP, JavaScript, HTML/CSS, ERP, CSV, SOAP, OpenLiteSpeed.</p>
+            </div>
+            <div class="case-summary__item">
+                <strong>Tulokset</strong>
+                <p>Latausajoista saatiin pois noin 4-6 sekuntia ja nykyinen latausaika on noin 1,5 sekuntia.</p>
+            </div>
+        </div>
+
         <div class="migraatio">
             <h3>Projektin kulku aikajärjestyksessä</h3>
             <p>
@@ -67,9 +105,23 @@
                 nykyinen latausaika on noin 1,5 sekuntia. Tämä paransi sekä asiakaskokemusta että verkkokaupan
                 tuotantovarmuutta.
             </p>
+            <div class="case-summary" aria-label="Suorituskykytulokset">
+                <div class="case-summary__item">
+                    <strong>Latausaika</strong>
+                    <p>Parani noin 4-6 sekuntia aiempaan tilanteeseen verrattuna.</p>
+                </div>
+                <div class="case-summary__item">
+                    <strong>Nykyinen taso</strong>
+                    <p>Noin 1,5 sekunnin latausaika optimoidussa tuotantoympäristössä.</p>
+                </div>
+                <div class="case-summary__item">
+                    <strong>Ympäristö</strong>
+                    <p>OpenLiteSpeed, WooCommerce, PHP ja palvelintason välimuisti.</p>
+                </div>
+            </div>
             <br>
             <br>
-            <h3>Laajempi vastuualue TP-verkkokauppassa</h3>
+            <h3>Laajempi vastuualue TP-verkkokaupassa</h3>
             <p>
                 Olen tehnyt TP- ja PKC-verkkokauppoihin liittyen laajasti käytännön verkkokauppakehitystä, ylläpitoa ja
                 liiketoimintaa tukevia teknisiä ratkaisuja WordPress- ja WooCommerce-ympäristössä. Roolini on ollut
@@ -111,6 +163,15 @@
                 WordPress, WooCommerce, PHP, JavaScript/jQuery, HTML/CSS sekä integraatiot
                 ERP/CSV/SOAP-rajapinnoissa. Toteutan muutokset tuotantolähtöisesti, vaiheittain ja testattavasti siten, että
                 regressioriski pysyy hallinnassa ja verkkokaupan asiakaspolku säilyy vakaana.
+            </p>
+
+            <h3>Mitä opin projektista</h3>
+            <p>
+                Projekti vahvisti ymmärrystä siitä, että migraatio ei ole vain sisällön siirtoa
+                alustalta toiselle. Tuotantokaupassa pitää hallita integraatiot, välimuistit,
+                suorituskyky, asiakaspolku, tuotetieto ja sidosryhmien viestintä samaan aikaan.
+                Hyvä tekninen ratkaisu syntyy vasta, kun muutos on suunniteltu, testattu ja viety
+                tuotantoon hallitusti.
             </p>
         </div>
 
