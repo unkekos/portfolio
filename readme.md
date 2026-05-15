@@ -5,7 +5,7 @@ PHP-, Python-, Linux-, Docker- sekä dataan ja tekoälyyn liittyviä projekteja.
 
 Sivusto on tehty staattisilla HTML-, CSS- ja JavaScript-tiedostoilla. Erillistä build-vaihetta ei tarvita.
 
-Live-sivusto: <https://portfolio.esasannaemmakoti.fi>
+Live-sivusto: <https://epartanen.fi>
 
 ## Sisältö
 
@@ -19,21 +19,24 @@ Live-sivusto: <https://portfolio.esasannaemmakoti.fi>
 ## Rakenne
 
 ```text
-index.html                 Etusivu
-pages/                     Alasivut ja tarkemmat työnäytteet
-assets/css/                Sivuston tyylit
-assets/js/                 Sivuston JavaScript ja analytiikan suostumuslogiikka
-images/                    Kuvat ja logot
+readme.md                  Projektin yleiskuvaus
+LOCAL_DEPLOYMENT.md        Paikalliset julkaisuohjeet, ei gitissä
+public/                    Julkaistava staattinen sivusto
+public/index.html          Etusivu
+public/pkc/ ym.            Siistit alasivujen URL-rakenteet
+public/pages/              Vanhat osoitteet uudelleenohjauksia varten
+public/assets/             CSS- ja JavaScript-tiedostot
+public/images/             Kuvat ja logot
 ```
 
 ## Kehittäminen
 
-Muokkaa tiedostoja suoraan tässä hakemistossa.
+Muokkaa julkaistavia sivutiedostoja `public/`-kansion sisällä.
 
 Paikalliseen testaukseen voi käyttää esimerkiksi Pythonin staattista palvelinta:
 
 ```bash
-python3 -m http.server 5173
+python3 -m http.server 5173 --directory public
 ```
 
 Tämän jälkeen sivu avautuu paikallisesti osoitteessa:

@@ -82,9 +82,7 @@
     }
 
     function privacyPageUrl() {
-        return window.location.pathname.includes("/pages/")
-            ? "tietosuoja.html"
-            : "pages/tietosuoja.html";
+        return "/tietosuoja/";
     }
 
     function removeBanner() {

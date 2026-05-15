@@ -1,3 +1,16 @@
+(() => {
+    const indexFile = "/index.html";
+    const { pathname, search, hash } = window.location;
+
+    if (!pathname.endsWith(indexFile)) {
+        return;
+    }
+
+    const cleanPath = (pathname.slice(0, -indexFile.length) || "") + "/";
+    const cleanHash = hash === "#home" ? "" : hash;
+    window.history.replaceState(null, "", cleanPath + search + cleanHash);
+})();
+
 // Odotetaan, että sivu latautuu
 document.addEventListener('DOMContentLoaded', () => {
     // Päivitä vuosiluku footeriin automaattisesti
