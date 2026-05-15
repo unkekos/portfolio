@@ -19,12 +19,11 @@ Live-sivusto: <https://portfolio.esasannaemmakoti.fi>
 ## Rakenne
 
 ```text
-index.html        Etusivu
-pages/            Alasivut ja tarkemmat työnäytteet
-css/style.css     Sivuston tyylit
-js/script.js      Sivuston JavaScript
-images/           Kuvat ja logot
-assets/           Muut staattiset tiedostot
+index.html                 Etusivu
+pages/                     Alasivut ja tarkemmat työnäytteet
+assets/css/                Sivuston tyylit
+assets/js/                 Sivuston JavaScript ja analytiikan suostumuslogiikka
+images/                    Kuvat ja logot
 ```
 
 ## Kehittäminen
