@@ -45,18 +45,6 @@ Tämän jälkeen sivu avautuu paikallisesti osoitteessa:
 http://127.0.0.1:5173/
 ```
 
-## Julkaisu
-
-Varsinainen palvelinkohtainen julkaisutapa ei kuulu tähän repoon, koska se sisältää konekohtaisia polkuja, palvelunimiä ja Cloudflare Tunnel -asetuksia.
-
-Tällä palvelimella paikalliset julkaisuohjeet ovat tiedostossa:
-
-```text
-LOCAL_DEPLOYMENT.md
-```
-
-Tiedosto on tarkoituksella jätetty gitin ulkopuolelle.
-
 ## Tekninen toteutus
 
 Portfolio toimii ilman raskasta frontend-kehystä tai build-putkea. Ratkaisu on
